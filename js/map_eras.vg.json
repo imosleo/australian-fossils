@@ -1,0 +1,117 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Older fossils sit in the centre and west, younger ones in the south and east",
+    "subtitle": "The same map drawn once for each era, oldest on the left. Each dot is one fossil site."
+  },
+  "data": {"url": "data/fossil_sites.csv"},
+  "columns": 4,
+  "concat": [
+    {
+      "title": {"text": "Precambrian, before 539 million years ago", "fontSize": 12, "subtitle": ""},
+      "width": 215,
+      "height": 190,
+      "projection": {"type": "equalEarth", "rotate": [-134, 0, 0]},
+      "layer": [
+        {
+          "data": {"url": "js/australian_states.topojson", "format": {"type": "topojson", "feature": "australian_states"}},
+          "mark": {"type": "geoshape", "fill": "#E6DFD3", "stroke": "white", "strokeWidth": 0.8}
+        },
+        {
+          "transform": [{"filter": "datum.era == 'Precambrian'"}],
+          "mark": {"type": "circle", "size": 9, "opacity": 0.6, "color": "#8E5BA6"},
+          "encoding": {
+            "longitude": {"field": "longitude", "type": "quantitative"},
+            "latitude": {"field": "latitude", "type": "quantitative"},
+            "tooltip": [
+              {"field": "state", "type": "nominal", "title": "State"},
+              {"field": "period", "type": "nominal", "title": "Period"},
+              {"field": "records", "type": "quantitative", "title": "Fossil records"}
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": {"text": "Palaeozoic, 539 to 252 million years ago", "fontSize": 12, "subtitle": ""},
+      "width": 215,
+      "height": 190,
+      "projection": {"type": "equalEarth", "rotate": [-134, 0, 0]},
+      "layer": [
+        {
+          "data": {"url": "js/australian_states.topojson", "format": {"type": "topojson", "feature": "australian_states"}},
+          "mark": {"type": "geoshape", "fill": "#E6DFD3", "stroke": "white", "strokeWidth": 0.8}
+        },
+        {
+          "transform": [{"filter": "datum.era == 'Palaeozoic'"}],
+          "mark": {"type": "circle", "size": 9, "opacity": 0.6, "color": "#3E8E63"},
+          "encoding": {
+            "longitude": {"field": "longitude", "type": "quantitative"},
+            "latitude": {"field": "latitude", "type": "quantitative"},
+            "tooltip": [
+              {"field": "state", "type": "nominal", "title": "State"},
+              {"field": "period", "type": "nominal", "title": "Period"},
+              {"field": "records", "type": "quantitative", "title": "Fossil records"}
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": {"text": "Mesozoic, 252 to 66 million years ago", "fontSize": 12, "subtitle": ""},
+      "width": 215,
+      "height": 190,
+      "projection": {"type": "equalEarth", "rotate": [-134, 0, 0]},
+      "layer": [
+        {
+          "data": {"url": "js/australian_states.topojson", "format": {"type": "topojson", "feature": "australian_states"}},
+          "mark": {"type": "geoshape", "fill": "#E6DFD3", "stroke": "white", "strokeWidth": 0.8}
+        },
+        {
+          "transform": [{"filter": "datum.era == 'Mesozoic'"}],
+          "mark": {"type": "circle", "size": 9, "opacity": 0.6, "color": "#2F7EA8"},
+          "encoding": {
+            "longitude": {"field": "longitude", "type": "quantitative"},
+            "latitude": {"field": "latitude", "type": "quantitative"},
+            "tooltip": [
+              {"field": "state", "type": "nominal", "title": "State"},
+              {"field": "period", "type": "nominal", "title": "Period"},
+              {"field": "records", "type": "quantitative", "title": "Fossil records"}
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "title": {"text": "Cenozoic, 66 million years ago to today", "fontSize": 12, "subtitle": ""},
+      "width": 215,
+      "height": 190,
+      "projection": {"type": "equalEarth", "rotate": [-134, 0, 0]},
+      "layer": [
+        {
+          "data": {"url": "js/australian_states.topojson", "format": {"type": "topojson", "feature": "australian_states"}},
+          "mark": {"type": "geoshape", "fill": "#E6DFD3", "stroke": "white", "strokeWidth": 0.8}
+        },
+        {
+          "transform": [{"filter": "datum.era == 'Cenozoic'"}],
+          "mark": {"type": "circle", "size": 9, "opacity": 0.6, "color": "#D08A2E"},
+          "encoding": {
+            "longitude": {"field": "longitude", "type": "quantitative"},
+            "latitude": {"field": "latitude", "type": "quantitative"},
+            "tooltip": [
+              {"field": "state", "type": "nominal", "title": "State"},
+              {"field": "period", "type": "nominal", "title": "Period"},
+              {"field": "records", "type": "quantitative", "title": "Fossil records"}
+            ]
+          }
+        }
+      ]
+    }
+  ],
+  "spacing": 14,
+  "config": {
+    "font": "Open Sans",
+    "view": {"stroke": null},
+    "title": {"font": "Open Sans", "fontSize": 16, "fontWeight": 700, "color": "#2B2620", "anchor": "start", "subtitleFontSize": 12.5, "subtitleColor": "#5B5348", "offset": 10}
+  }
+}

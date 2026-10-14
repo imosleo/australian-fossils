@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Written in Stone: Australia's Fossil Collections</title>
+
+  <!-- Pure.css grid (Week 5), with the responsive grid so columns stack on small screens -->
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css" integrity="sha384-Uu6IeWbM+gzNVXJcM9XV3SohHtmWE+3VGi496jvgX1jyvDTXfdK+rfZc8C1Aehk5" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+
+  <!-- Google Fonts: Cinzel for headings, Open Sans for text -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- our own CSS: layout.css for the layout, style.css for the fonts -->
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Vega, Vega-Lite and Vega-Embed (same versions as the Week 8 studio) -->
+  <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.5.0"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.21.0"></script>
+</head>
+
+<body>
+<div class="page">
+
+  <!-- ===== Header ===== -->
+  <div class="hero">
+    <p class="kicker" style="color: #C9B79C;">Australia's fossil collections</p>
+    <h1>Written in Stone</h1>
+    <p class="subtitle">Two hundred years of fossil hunting in Australia have uncovered over three billion years of life on Earth. Where were these fossils found, how old are they and who looks after them today?</p>
+    <p class="byline">By Ian Zheng Yan Leong &nbsp;|&nbsp; Monash University Malaysia &nbsp;|&nbsp; Published 11 October 2026</p>
+  </div>
+
+  <!-- ===== Introduction ===== -->
+  <div class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-2">
+      <div class="description-left">
+        <p class="lead">Australia is about 23 times the size of Malaysia and its rocks hold one of the longest fossil records on the planet. Scientists have described fossils from every state, from tiny shells to giant marsupials and dinosaur footprints.</p>
+        <p>This page follows those fossils through four questions: where they come from, how old they are, what kinds of life they show and how well this shared natural heritage is protected and kept.</p>
+      </div>
+    </div>
+    <div class="pure-u-1 pure-u-md-1-2">
+      <div class="pure-g" style="margin-bottom: 0;">
+        <div class="pure-u-1-2 stat"><div class="stat-box"><p class="stat-number">51,019</p><p class="stat-label">fossil records in the scientific database</p></div></div>
+        <div class="pure-u-1-2 stat"><div class="stat-box"><p class="stat-number">8,710</p><p class="stat-label">fossil sites across all eight states and territories</p></div></div>
+        <div class="pure-u-1-2 stat"><div class="stat-box"><p class="stat-number">3.4 billion</p><p class="stat-label">years old: the oldest fossils, in the Pilbara</p></div></div>
+        <div class="pure-u-1-2 stat"><div class="stat-box"><p class="stat-number">4 in 1,000</p><p class="stat-label">fossil specimens in the global online catalogue are held in Australia</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Glossary ===== -->
+  <div class="pure-g gutter-row">
+    <div class="pure-u-1"><p class="kicker">Three words used on this page</p></div>
+    <div class="pure-u-1 pure-u-md-1-3 term">
+      <h3>Fossil</h3>
+      <p class="small-font">The remains or traces of ancient life kept in rock, such as shells, bones, leaves and footprints.</p>
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3 term">
+      <h3>Era and period</h3>
+      <p class="small-font">Chapters of Earth's history. The four eras used here are the <span class="era-precambrian">Precambrian</span>, <span class="era-palaeozoic">Palaeozoic</span>, <span class="era-mesozoic">Mesozoic</span> and <span class="era-cenozoic">Cenozoic</span> and each era is split into periods such as the Jurassic.</p>
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3 term">
+      <h3>Fossil record</h3>
+      <p class="small-font">One kind of fossil reported from one site in a scientific paper. A rich site can hold hundreds of records.</p>
+    </div>
+  </div>
+
+  <!-- ===== Section 1: Where ===== -->
+  <hr class="section-rule">
+  <div class="pure-g">
+    <div class="pure-u-1">
+      <p class="kicker">Part 1 &middot; Discovery locations</p>
+      <h2>Where are Australia's fossils found?</h2>
+      <p>Fossil sites cover the whole continent, but they cluster where old rock reaches the surface and where people have searched longest: the south-east, the Flinders Ranges, the Kimberley and outback Queensland.</p>
+      <p class="how-to">Hover over a circle or star for details. Use the menu under the map to show one era at a time.</p>
+    </div>
+    <div class="pure-u-1">
+      <div id="map_sites" class="vis-container"></div>
+    </div>
+  </div>
+
+  <div class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+      <div class="description-left">
+        <h3>Big states, few fossils per square kilometre</h3>
+        <p>Queensland has the most fossil records, but it is also huge. Dividing by land area shows that Victoria and Tasmania are the most closely searched ground.</p>
+        <p>For scale, Peninsular Malaysia covers about 132,000 square kilometres, a little over half the size of Victoria.</p>
+        <p>The tiny Australian Capital Territory scores 1,429, the highest rate of all, because its land area is so small.</p>
+      </div>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+      <div id="map_choropleth" class="vis-container"></div>
+    </div>
+  </div>
+
+  <div class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+      <div class="description-left">
+        <h3>A few rock layers hold thousands of fossils</h3>
+        <p>Some single rock formations have yielded over a thousand fossil records each. The Callytharra Formation in Western Australia, laid down in a Permian sea, tops the list.</p>
+        <p>Nine of the ten richest formations are from the <span class="era-palaeozoic">Palaeozoic</span> or <span class="era-mesozoic">Mesozoic</span>, long before the dinosaurs died out.</p>
+      </div>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+      <div id="bar_formations" class="vis-container"></div>
+    </div>
+  </div>
+
+  <!-- ===== Section 2: When ===== -->
+  <hr class="section-rule">
+  <div class="pure-g">
+    <div class="pure-u-1">
+      <p class="kicker">Part 2 &middot; Geological periods</p>
+      <h2>How old are they?</h2>
+      <p>Most of Australia's fossil records are older than the dinosaurs. Over half come from the <span class="era-palaeozoic">Palaeozoic</span>, when Australia was part of the supercontinent Gondwana and much of it lay under shallow seas.</p>
+    </div>
+    <div class="pure-u-1">
+      <div id="stream_groups" class="vis-container"></div>
+    </div>
+  </div>
+
+  <div class="pure-g">
+    <div class="pure-u-1">
+      <div id="map_eras" class="vis-container"></div>
+    </div>
+  </div>
+
+  <div class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+      <div class="description-left">
+        <h3>Each state tells a different chapter</h3>
+        <p>South Australia's typical fossil site is about 516 million years old, from the Cambrian, when animals with shells first appeared.</p>
+        <p>Victoria's typical site is about 112 million years old. Its fossils include dinosaurs from the southern coast and many younger sea shells.</p>
+      </div>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+      <div id="boxplot_state_age" class="vis-container"></div>
+    </div>
+  </div>
+
+  <!-- ===== Section 3: What ===== -->
+  <hr class="section-rule">
+  <div class="pure-g">
+    <div class="pure-u-1">
+      <p class="kicker">Part 3 &middot; Fossil types</p>
+      <h2>What kinds of life do they show?</h2>
+      <p>Fossils explain Earth's natural history by showing which life lived when. Australia's record moves from sea floors full of shelled animals to land covered by plants and roamed by backboned animals.</p>
+    </div>
+    <div class="pure-u-1">
+      <div id="timeline_ranges" class="vis-container"></div>
+    </div>
+  </div>
+
+  <div class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+      <div class="description-left">
+        <h3>Sea first, land later</h3>
+        <p>Lamp shells, sea animals with two shells, dominate the Permian with 4,665 records. They almost vanish after the Great Dying, the largest extinction in Earth's history.</p>
+        <p>The most recent period, the Quaternary, is rich in plant fossils and the bones of giant marsupials from caves such as Naracoorte.</p>
+      </div>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+      <div id="heatmap_period_group" class="vis-container"></div>
+    </div>
+  </div>
+
+  <!-- ===== Section 4: Discovery history ===== -->
+  <hr class="section-rule">
+  <div class="pure-g">
+    <div class="pure-u-1">
+      <p class="kicker">Part 4 &middot; Historical change</p>
+      <h2>When were they discovered?</h2>
+      <p>The earliest records in the database were described in the 1820s. Discovery stayed slow for over a century, then grew quickly after 1950. The 1990s and 2000s each added over 9,500 new fossil records.</p>
+      <p class="how-to">Drag across the timeline under the map to see where the fossils of those years were found. Double-click the timeline to reset.</p>
+    </div>
+    <div class="pure-u-1">
+      <div id="discovery_brush" class="vis-container"></div>
+    </div>
+  </div>
+
+  <div class="pure-g">
+    <div class="pure-u-1 pure-u-md-1-3">
+      <div class="description-left">
+        <h3>No state stays on top</h3>
+        <p>Victoria led in the 1950s and 1960s, New South Wales in the 1970s and Queensland in the 1980s. In the 2000s Western Australia took first place.</p>
+        <p>Since 1990 the top spot has changed hands almost every decade, so no single state holds the whole story.</p>
+      </div>
+    </div>
+    <div class="pure-u-1 pure-u-md-2-3">
+      <div id="bump_states" class="vis-container"></div>
+    </div>
+  </div>
+
+  <!-- ===== Section 5: Heritage ===== -->
+  <hr class="section-rule">
+  <div class="pure-g gutter-row">
+    <div class="pure-u-1">
+      <p class="kicker">Part 5 &middot; Heritage preservation</p>
+      <h2>Who looks after Australia's fossils?</h2>
+      <p>Seven places on Australia's National Heritage List are protected for their fossils. These are marked with stars on the first map. Many of the specimens themselves have left the country, though.</p>
+    </div>
+    <div class="pure-u-1 pure-u-md-1-2 place"><div class="place-box"><h3>Ediacara, Nilpena (South Australia)</h3><p class="small-font">Some of the oldest complex animals on Earth, about 550 million years old. Listed in 2007.</p></div></div>
+    <div class="pure-u-1 pure-u-md-1-2 place"><div class="place-box"><h3>Riversleigh and Naracoorte (Queensland and South Australia)</h3><p class="small-font">The Australian Fossil Mammal Sites, a World Heritage property, record how Australia's mammals evolved. Listed in 2007.</p></div></div>
+    <div class="pure-u-1 pure-u-md-1-2 place"><div class="place-box"><h3>Dinosaur Stampede, Lark Quarry (Queensland)</h3><p class="small-font">Thousands of dinosaur footprints about 95 million years old. Listed in 2004, the first of the seven.</p></div></div>
+    <div class="pure-u-1 pure-u-md-1-2 place"><div class="place-box"><h3>West Kimberley, Willandra Lakes and Yea</h3><p class="small-font">Dinosaur tracks near Broome, ice age giant animals at Willandra and plants over 400 million years old at Yea. Listed in 2007 and 2011.</p></div></div>
+  </div>
+
+  <div class="pure-g">
+    <div class="pure-u-1">
+      <div id="map_flows" class="vis-container"></div>
+    </div>
+  </div>
+
+  <div class="pure-g">
+    <div class="pure-u-1">
+      <div id="waffle_holders" class="vis-container"></div>
+      <p class="small-font">These counts cover only specimens tagged as fossils in the Global Biodiversity Information Facility, the largest global online catalogue of natural history collections. Australian museums keep large fossil collections of their own, but few are shared there as fossil specimens, so this shows what the world can see online, not everything Australia holds.</p>
+    </div>
+  </div>
+
+  <!-- ===== Conclusion ===== -->
+  <hr class="section-rule">
+  <div class="pure-g gutter-row">
+    <div class="pure-u-1">
+      <p class="kicker">What it all means</p>
+      <h2>Three things to take away</h2>
+    </div>
+    <div class="pure-u-1 pure-u-md-1-3 takeaway"><div class="takeaway-box"><h3>A record of deep time</h3><p class="small-font">From 3.4 billion year old stromatolites to ice age bones, Australia's rocks cover almost the whole story of life.</p></div></div>
+    <div class="pure-u-1 pure-u-md-1-3 takeaway"><div class="takeaway-box"><h3>Discovery is still growing</h3><p class="small-font">Over 90% of fossil records were described after 1950 and the lead keeps passing from state to state.</p></div></div>
+    <div class="pure-u-1 pure-u-md-1-3 takeaway"><div class="takeaway-box"><h3>Heritage held far away</h3><p class="small-font">Seven fossil places are protected at home, but only 4 in every 1,000 fossil specimens in the global online catalogue are held in Australia.</p></div></div>
+  </div>
+
+  <!-- ===== Footer: sources and authorship ===== -->
+  <footer class="pure-g">
+    <div class="pure-u-1 small-font">
+      <h3>Data sources</h3>
+      <ul>
+        <li>Paleobiology Database, Australian fossil occurrences and the International Commission on Stratigraphy time scale, downloaded 11 October 2026. <a href="https://paleobiodb.org" target="_blank">paleobiodb.org</a> (Creative Commons Attribution 4.0).</li>
+        <li>GBIF.org, Global Biodiversity Information Facility, occurrence search for fossil specimens collected in Australia, 11 October 2026. <a href="https://www.gbif.org/occurrence/search?country=AU&amp;basis_of_record=FOSSIL_SPECIMEN" target="_blank">gbif.org</a>.</li>
+        <li>Department of Climate Change, Energy, the Environment and Water, National Heritage List Spatial Database, accessed 11 October 2026. <a href="https://data.gov.au/data/dataset/national-heritage-list-spatial-database-nhl-public" target="_blank">data.gov.au</a> (Creative Commons Attribution 3.0 Australia).</li>
+        <li>Australian Bureau of Statistics, Australian Statistical Geography Standard Edition 3, state and territory boundaries 2021. <a href="https://www.abs.gov.au/statistics/standards/australian-statistical-geography-standard-asgs-edition-3/jul2021-jun2026/access-and-downloads/digital-boundary-files" target="_blank">abs.gov.au</a> (Creative Commons Attribution 4.0).</li>
+        <li>Natural Earth, world countries and graticules, 1:110 million scale, through the FIT3179 Vega-Lite studio files. <a href="https://www.naturalearthdata.com" target="_blank">naturalearthdata.com</a> (public domain).</li>
+      </ul>
+      <h3>Notes on the data</h3>
+      <p>Each fossil record is placed in the geological period that holds the middle of its age range. Fossil groups follow the scientific phylum: lamp shells are brachiopods and animals with backbones include fish, reptiles and mammals. Recent decades look smaller because new papers take time to enter the database.</p>
+      <p>Charts made with Vega-Lite. Created by Ian Zheng Yan Leong for FIT3179 Data Visualisation, Monash University Malaysia, October 2026.</p>
+    </div>
+  </footer>
+
+</div>
+
+<script type="text/javascript">
+  // each chart's JSON spec lives in the js folder; "actions": false hides the Open in Vega Editor menu
+  var specs = {
+    "#map_sites": "js/map_sites.vg.json",
+    "#map_choropleth": "js/map_choropleth.vg.json",
+    "#bar_formations": "js/bar_formations.vg.json",
+    "#stream_groups": "js/stream_groups.vg.json",
+    "#map_eras": "js/map_eras.vg.json",
+    "#boxplot_state_age": "js/boxplot_state_age.vg.json",
+    "#timeline_ranges": "js/timeline_ranges.vg.json",
+    "#heatmap_period_group": "js/heatmap_period_group.vg.json",
+    "#discovery_brush": "js/discovery_brush.vg.json",
+    "#bump_states": "js/bump_states.vg.json",
+    "#map_flows": "js/map_flows.vg.json",
+    "#waffle_holders": "js/waffle_holders.vg.json"
+  };
+  for (var id in specs) {
+    vegaEmbed(id, specs[id], {"actions": false}).catch(console.error);
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,1001 @@
+cell,column,row,country,specimens
+0,0,0,Germany,27417
+1,0,1,Germany,27417
+2,0,2,Germany,27417
+3,0,3,Germany,27417
+4,0,4,Germany,27417
+5,0,5,Germany,27417
+6,0,6,Germany,27417
+7,0,7,Germany,27417
+8,0,8,Germany,27417
+9,0,9,Germany,27417
+10,0,10,Germany,27417
+11,0,11,Germany,27417
+12,0,12,Germany,27417
+13,0,13,Germany,27417
+14,0,14,Germany,27417
+15,0,15,Germany,27417
+16,0,16,Germany,27417
+17,0,17,Germany,27417
+18,0,18,Germany,27417
+19,0,19,Germany,27417
+20,1,0,Germany,27417
+21,1,1,Germany,27417
+22,1,2,Germany,27417
+23,1,3,Germany,27417
+24,1,4,Germany,27417
+25,1,5,Germany,27417
+26,1,6,Germany,27417
+27,1,7,Germany,27417
+28,1,8,Germany,27417
+29,1,9,Germany,27417
+30,1,10,Germany,27417
+31,1,11,Germany,27417
+32,1,12,Germany,27417
+33,1,13,Germany,27417
+34,1,14,Germany,27417
+35,1,15,Germany,27417
+36,1,16,Germany,27417
+37,1,17,Germany,27417
+38,1,18,Germany,27417
+39,1,19,Germany,27417
+40,2,0,Germany,27417
+41,2,1,Germany,27417
+42,2,2,Germany,27417
+43,2,3,Germany,27417
+44,2,4,Germany,27417
+45,2,5,Germany,27417
+46,2,6,Germany,27417
+47,2,7,Germany,27417
+48,2,8,Germany,27417
+49,2,9,Germany,27417
+50,2,10,Germany,27417
+51,2,11,Germany,27417
+52,2,12,Germany,27417
+53,2,13,Germany,27417
+54,2,14,Germany,27417
+55,2,15,Germany,27417
+56,2,16,Germany,27417
+57,2,17,Germany,27417
+58,2,18,Germany,27417
+59,2,19,Germany,27417
+60,3,0,Germany,27417
+61,3,1,Germany,27417
+62,3,2,Germany,27417
+63,3,3,Germany,27417
+64,3,4,Germany,27417
+65,3,5,Germany,27417
+66,3,6,Germany,27417
+67,3,7,Germany,27417
+68,3,8,Germany,27417
+69,3,9,Germany,27417
+70,3,10,Germany,27417
+71,3,11,Germany,27417
+72,3,12,Germany,27417
+73,3,13,Germany,27417
+74,3,14,Germany,27417
+75,3,15,Germany,27417
+76,3,16,Germany,27417
+77,3,17,Germany,27417
+78,3,18,Germany,27417
+79,3,19,Germany,27417
+80,4,0,Germany,27417
+81,4,1,Germany,27417
+82,4,2,Germany,27417
+83,4,3,Germany,27417
+84,4,4,Germany,27417
+85,4,5,Germany,27417
+86,4,6,Germany,27417
+87,4,7,Germany,27417
+88,4,8,Germany,27417
+89,4,9,Germany,27417
+90,4,10,Germany,27417
+91,4,11,Germany,27417
+92,4,12,Germany,27417
+93,4,13,Germany,27417
+94,4,14,Germany,27417
+95,4,15,Germany,27417
+96,4,16,Germany,27417
+97,4,17,Germany,27417
+98,4,18,Germany,27417
+99,4,19,Germany,27417
+100,5,0,Germany,27417
+101,5,1,Germany,27417
+102,5,2,Germany,27417
+103,5,3,Germany,27417
+104,5,4,Germany,27417
+105,5,5,Germany,27417
+106,5,6,Germany,27417
+107,5,7,Germany,27417
+108,5,8,Germany,27417
+109,5,9,Germany,27417
+110,5,10,Germany,27417
+111,5,11,Germany,27417
+112,5,12,Germany,27417
+113,5,13,Germany,27417
+114,5,14,Germany,27417
+115,5,15,Germany,27417
+116,5,16,Germany,27417
+117,5,17,Germany,27417
+118,5,18,Germany,27417
+119,5,19,Germany,27417
+120,6,0,Germany,27417
+121,6,1,Germany,27417
+122,6,2,Germany,27417
+123,6,3,Germany,27417
+124,6,4,Germany,27417
+125,6,5,Germany,27417
+126,6,6,Germany,27417
+127,6,7,Germany,27417
+128,6,8,Germany,27417
+129,6,9,Germany,27417
+130,6,10,Germany,27417
+131,6,11,Germany,27417
+132,6,12,Germany,27417
+133,6,13,Germany,27417
+134,6,14,Germany,27417
+135,6,15,Germany,27417
+136,6,16,Germany,27417
+137,6,17,Germany,27417
+138,6,18,Germany,27417
+139,6,19,Germany,27417
+140,7,0,Germany,27417
+141,7,1,Germany,27417
+142,7,2,Germany,27417
+143,7,3,Germany,27417
+144,7,4,Germany,27417
+145,7,5,Germany,27417
+146,7,6,Germany,27417
+147,7,7,Germany,27417
+148,7,8,Germany,27417
+149,7,9,Germany,27417
+150,7,10,Germany,27417
+151,7,11,Germany,27417
+152,7,12,Germany,27417
+153,7,13,Germany,27417
+154,7,14,Germany,27417
+155,7,15,Germany,27417
+156,7,16,Germany,27417
+157,7,17,Germany,27417
+158,7,18,Germany,27417
+159,7,19,Germany,27417
+160,8,0,Germany,27417
+161,8,1,Germany,27417
+162,8,2,Germany,27417
+163,8,3,Germany,27417
+164,8,4,Germany,27417
+165,8,5,Germany,27417
+166,8,6,Germany,27417
+167,8,7,Germany,27417
+168,8,8,Germany,27417
+169,8,9,Germany,27417
+170,8,10,Germany,27417
+171,8,11,Germany,27417
+172,8,12,Germany,27417
+173,8,13,Germany,27417
+174,8,14,Germany,27417
+175,8,15,Germany,27417
+176,8,16,Germany,27417
+177,8,17,Germany,27417
+178,8,18,Germany,27417
+179,8,19,Germany,27417
+180,9,0,Germany,27417
+181,9,1,Germany,27417
+182,9,2,Germany,27417
+183,9,3,Germany,27417
+184,9,4,Germany,27417
+185,9,5,Germany,27417
+186,9,6,Germany,27417
+187,9,7,Germany,27417
+188,9,8,Germany,27417
+189,9,9,Germany,27417
+190,9,10,Germany,27417
+191,9,11,Germany,27417
+192,9,12,Germany,27417
+193,9,13,Germany,27417
+194,9,14,Germany,27417
+195,9,15,Germany,27417
+196,9,16,Germany,27417
+197,9,17,Germany,27417
+198,9,18,Germany,27417
+199,9,19,Germany,27417
+200,10,0,Germany,27417
+201,10,1,Germany,27417
+202,10,2,Germany,27417
+203,10,3,Germany,27417
+204,10,4,Germany,27417
+205,10,5,Germany,27417
+206,10,6,Germany,27417
+207,10,7,Germany,27417
+208,10,8,Germany,27417
+209,10,9,Germany,27417
+210,10,10,Germany,27417
+211,10,11,Germany,27417
+212,10,12,Germany,27417
+213,10,13,Germany,27417
+214,10,14,Germany,27417
+215,10,15,Germany,27417
+216,10,16,Germany,27417
+217,10,17,Germany,27417
+218,10,18,Germany,27417
+219,10,19,Germany,27417
+220,11,0,Germany,27417
+221,11,1,Germany,27417
+222,11,2,Germany,27417
+223,11,3,Germany,27417
+224,11,4,Germany,27417
+225,11,5,Germany,27417
+226,11,6,Germany,27417
+227,11,7,Germany,27417
+228,11,8,Germany,27417
+229,11,9,Germany,27417
+230,11,10,Germany,27417
+231,11,11,Germany,27417
+232,11,12,Germany,27417
+233,11,13,Germany,27417
+234,11,14,Germany,27417
+235,11,15,Germany,27417
+236,11,16,Germany,27417
+237,11,17,Germany,27417
+238,11,18,Germany,27417
+239,11,19,Germany,27417
+240,12,0,Germany,27417
+241,12,1,Germany,27417
+242,12,2,Germany,27417
+243,12,3,Germany,27417
+244,12,4,Germany,27417
+245,12,5,Germany,27417
+246,12,6,Germany,27417
+247,12,7,Germany,27417
+248,12,8,Germany,27417
+249,12,9,Germany,27417
+250,12,10,Germany,27417
+251,12,11,Germany,27417
+252,12,12,Germany,27417
+253,12,13,Germany,27417
+254,12,14,Germany,27417
+255,12,15,Germany,27417
+256,12,16,Germany,27417
+257,12,17,Germany,27417
+258,12,18,Germany,27417
+259,12,19,Germany,27417
+260,13,0,Germany,27417
+261,13,1,Germany,27417
+262,13,2,Germany,27417
+263,13,3,Germany,27417
+264,13,4,Germany,27417
+265,13,5,Germany,27417
+266,13,6,Germany,27417
+267,13,7,Germany,27417
+268,13,8,Germany,27417
+269,13,9,Germany,27417
+270,13,10,Germany,27417
+271,13,11,Germany,27417
+272,13,12,Germany,27417
+273,13,13,Germany,27417
+274,13,14,Germany,27417
+275,13,15,Germany,27417
+276,13,16,Germany,27417
+277,13,17,Germany,27417
+278,13,18,Germany,27417
+279,13,19,Germany,27417
+280,14,0,Germany,27417
+281,14,1,Germany,27417
+282,14,2,Germany,27417
+283,14,3,Germany,27417
+284,14,4,Germany,27417
+285,14,5,Germany,27417
+286,14,6,Germany,27417
+287,14,7,Germany,27417
+288,14,8,Germany,27417
+289,14,9,Germany,27417
+290,14,10,Germany,27417
+291,14,11,Germany,27417
+292,14,12,Germany,27417
+293,14,13,Germany,27417
+294,14,14,Germany,27417
+295,14,15,Germany,27417
+296,14,16,Germany,27417
+297,14,17,Germany,27417
+298,14,18,Germany,27417
+299,14,19,Germany,27417
+300,15,0,Germany,27417
+301,15,1,Germany,27417
+302,15,2,Germany,27417
+303,15,3,Germany,27417
+304,15,4,Germany,27417
+305,15,5,Germany,27417
+306,15,6,Germany,27417
+307,15,7,Germany,27417
+308,15,8,Germany,27417
+309,15,9,Germany,27417
+310,15,10,Germany,27417
+311,15,11,Germany,27417
+312,15,12,Germany,27417
+313,15,13,Germany,27417
+314,15,14,Germany,27417
+315,15,15,Germany,27417
+316,15,16,Germany,27417
+317,15,17,Germany,27417
+318,15,18,Germany,27417
+319,15,19,Germany,27417
+320,16,0,Germany,27417
+321,16,1,Germany,27417
+322,16,2,Germany,27417
+323,16,3,Germany,27417
+324,16,4,Germany,27417
+325,16,5,Germany,27417
+326,16,6,Germany,27417
+327,16,7,Germany,27417
+328,16,8,Germany,27417
+329,16,9,Germany,27417
+330,16,10,Germany,27417
+331,16,11,Germany,27417
+332,16,12,Germany,27417
+333,16,13,Germany,27417
+334,16,14,Germany,27417
+335,16,15,Germany,27417
+336,16,16,Germany,27417
+337,16,17,Germany,27417
+338,16,18,Germany,27417
+339,16,19,Germany,27417
+340,17,0,Germany,27417
+341,17,1,Germany,27417
+342,17,2,Germany,27417
+343,17,3,Germany,27417
+344,17,4,Germany,27417
+345,17,5,Germany,27417
+346,17,6,Germany,27417
+347,17,7,Germany,27417
+348,17,8,Germany,27417
+349,17,9,Germany,27417
+350,17,10,Germany,27417
+351,17,11,Germany,27417
+352,17,12,Germany,27417
+353,17,13,Germany,27417
+354,17,14,Germany,27417
+355,17,15,Germany,27417
+356,17,16,Germany,27417
+357,17,17,Germany,27417
+358,17,18,Germany,27417
+359,17,19,Germany,27417
+360,18,0,Germany,27417
+361,18,1,Germany,27417
+362,18,2,Germany,27417
+363,18,3,Germany,27417
+364,18,4,Germany,27417
+365,18,5,Germany,27417
+366,18,6,Germany,27417
+367,18,7,Germany,27417
+368,18,8,Germany,27417
+369,18,9,Germany,27417
+370,18,10,Germany,27417
+371,18,11,Germany,27417
+372,18,12,Germany,27417
+373,18,13,Germany,27417
+374,18,14,Germany,27417
+375,18,15,Germany,27417
+376,18,16,Germany,27417
+377,18,17,Germany,27417
+378,18,18,Germany,27417
+379,18,19,Germany,27417
+380,19,0,Germany,27417
+381,19,1,Germany,27417
+382,19,2,Germany,27417
+383,19,3,Germany,27417
+384,19,4,Germany,27417
+385,19,5,Germany,27417
+386,19,6,Germany,27417
+387,19,7,Germany,27417
+388,19,8,Germany,27417
+389,19,9,Germany,27417
+390,19,10,Germany,27417
+391,19,11,Germany,27417
+392,19,12,Germany,27417
+393,19,13,Germany,27417
+394,19,14,Germany,27417
+395,19,15,Germany,27417
+396,19,16,Germany,27417
+397,19,17,Germany,27417
+398,19,18,Germany,27417
+399,19,19,Germany,27417
+400,20,0,Germany,27417
+401,20,1,Germany,27417
+402,20,2,Germany,27417
+403,20,3,Germany,27417
+404,20,4,Germany,27417
+405,20,5,Germany,27417
+406,20,6,Germany,27417
+407,20,7,Germany,27417
+408,20,8,Germany,27417
+409,20,9,Germany,27417
+410,20,10,Germany,27417
+411,20,11,Germany,27417
+412,20,12,Germany,27417
+413,20,13,Germany,27417
+414,20,14,United States,17761
+415,20,15,United States,17761
+416,20,16,United States,17761
+417,20,17,United States,17761
+418,20,18,United States,17761
+419,20,19,United States,17761
+420,21,0,United States,17761
+421,21,1,United States,17761
+422,21,2,United States,17761
+423,21,3,United States,17761
+424,21,4,United States,17761
+425,21,5,United States,17761
+426,21,6,United States,17761
+427,21,7,United States,17761
+428,21,8,United States,17761
+429,21,9,United States,17761
+430,21,10,United States,17761
+431,21,11,United States,17761
+432,21,12,United States,17761
+433,21,13,United States,17761
+434,21,14,United States,17761
+435,21,15,United States,17761
+436,21,16,United States,17761
+437,21,17,United States,17761
+438,21,18,United States,17761
+439,21,19,United States,17761
+440,22,0,United States,17761
+441,22,1,United States,17761
+442,22,2,United States,17761
+443,22,3,United States,17761
+444,22,4,United States,17761
+445,22,5,United States,17761
+446,22,6,United States,17761
+447,22,7,United States,17761
+448,22,8,United States,17761
+449,22,9,United States,17761
+450,22,10,United States,17761
+451,22,11,United States,17761
+452,22,12,United States,17761
+453,22,13,United States,17761
+454,22,14,United States,17761
+455,22,15,United States,17761
+456,22,16,United States,17761
+457,22,17,United States,17761
+458,22,18,United States,17761
+459,22,19,United States,17761
+460,23,0,United States,17761
+461,23,1,United States,17761
+462,23,2,United States,17761
+463,23,3,United States,17761
+464,23,4,United States,17761
+465,23,5,United States,17761
+466,23,6,United States,17761
+467,23,7,United States,17761
+468,23,8,United States,17761
+469,23,9,United States,17761
+470,23,10,United States,17761
+471,23,11,United States,17761
+472,23,12,United States,17761
+473,23,13,United States,17761
+474,23,14,United States,17761
+475,23,15,United States,17761
+476,23,16,United States,17761
+477,23,17,United States,17761
+478,23,18,United States,17761
+479,23,19,United States,17761
+480,24,0,United States,17761
+481,24,1,United States,17761
+482,24,2,United States,17761
+483,24,3,United States,17761
+484,24,4,United States,17761
+485,24,5,United States,17761
+486,24,6,United States,17761
+487,24,7,United States,17761
+488,24,8,United States,17761
+489,24,9,United States,17761
+490,24,10,United States,17761
+491,24,11,United States,17761
+492,24,12,United States,17761
+493,24,13,United States,17761
+494,24,14,United States,17761
+495,24,15,United States,17761
+496,24,16,United States,17761
+497,24,17,United States,17761
+498,24,18,United States,17761
+499,24,19,United States,17761
+500,25,0,United States,17761
+501,25,1,United States,17761
+502,25,2,United States,17761
+503,25,3,United States,17761
+504,25,4,United States,17761
+505,25,5,United States,17761
+506,25,6,United States,17761
+507,25,7,United States,17761
+508,25,8,United States,17761
+509,25,9,United States,17761
+510,25,10,United States,17761
+511,25,11,United States,17761
+512,25,12,United States,17761
+513,25,13,United States,17761
+514,25,14,United States,17761
+515,25,15,United States,17761
+516,25,16,United States,17761
+517,25,17,United States,17761
+518,25,18,United States,17761
+519,25,19,United States,17761
+520,26,0,United States,17761
+521,26,1,United States,17761
+522,26,2,United States,17761
+523,26,3,United States,17761
+524,26,4,United States,17761
+525,26,5,United States,17761
+526,26,6,United States,17761
+527,26,7,United States,17761
+528,26,8,United States,17761
+529,26,9,United States,17761
+530,26,10,United States,17761
+531,26,11,United States,17761
+532,26,12,United States,17761
+533,26,13,United States,17761
+534,26,14,United States,17761
+535,26,15,United States,17761
+536,26,16,United States,17761
+537,26,17,United States,17761
+538,26,18,United States,17761
+539,26,19,United States,17761
+540,27,0,United States,17761
+541,27,1,United States,17761
+542,27,2,United States,17761
+543,27,3,United States,17761
+544,27,4,United States,17761
+545,27,5,United States,17761
+546,27,6,United States,17761
+547,27,7,United States,17761
+548,27,8,United States,17761
+549,27,9,United States,17761
+550,27,10,United States,17761
+551,27,11,United States,17761
+552,27,12,United States,17761
+553,27,13,United States,17761
+554,27,14,United States,17761
+555,27,15,United States,17761
+556,27,16,United States,17761
+557,27,17,United States,17761
+558,27,18,United States,17761
+559,27,19,United States,17761
+560,28,0,United States,17761
+561,28,1,United States,17761
+562,28,2,United States,17761
+563,28,3,United States,17761
+564,28,4,United States,17761
+565,28,5,United States,17761
+566,28,6,United States,17761
+567,28,7,United States,17761
+568,28,8,United States,17761
+569,28,9,United States,17761
+570,28,10,United States,17761
+571,28,11,United States,17761
+572,28,12,United States,17761
+573,28,13,United States,17761
+574,28,14,United States,17761
+575,28,15,United States,17761
+576,28,16,United States,17761
+577,28,17,United States,17761
+578,28,18,United States,17761
+579,28,19,United States,17761
+580,29,0,United States,17761
+581,29,1,United States,17761
+582,29,2,United States,17761
+583,29,3,United States,17761
+584,29,4,United States,17761
+585,29,5,United States,17761
+586,29,6,United States,17761
+587,29,7,United States,17761
+588,29,8,United States,17761
+589,29,9,United States,17761
+590,29,10,United States,17761
+591,29,11,United States,17761
+592,29,12,United States,17761
+593,29,13,United States,17761
+594,29,14,United States,17761
+595,29,15,United States,17761
+596,29,16,United States,17761
+597,29,17,United States,17761
+598,29,18,United States,17761
+599,29,19,United States,17761
+600,30,0,United States,17761
+601,30,1,United States,17761
+602,30,2,United States,17761
+603,30,3,United States,17761
+604,30,4,United States,17761
+605,30,5,United States,17761
+606,30,6,United States,17761
+607,30,7,United States,17761
+608,30,8,United States,17761
+609,30,9,United States,17761
+610,30,10,United States,17761
+611,30,11,United States,17761
+612,30,12,United States,17761
+613,30,13,United States,17761
+614,30,14,United States,17761
+615,30,15,United States,17761
+616,30,16,United States,17761
+617,30,17,United States,17761
+618,30,18,United States,17761
+619,30,19,United States,17761
+620,31,0,United States,17761
+621,31,1,United States,17761
+622,31,2,United States,17761
+623,31,3,United States,17761
+624,31,4,United States,17761
+625,31,5,United States,17761
+626,31,6,United States,17761
+627,31,7,United States,17761
+628,31,8,United States,17761
+629,31,9,United States,17761
+630,31,10,United States,17761
+631,31,11,United States,17761
+632,31,12,United States,17761
+633,31,13,United States,17761
+634,31,14,United States,17761
+635,31,15,United States,17761
+636,31,16,United States,17761
+637,31,17,United States,17761
+638,31,18,United States,17761
+639,31,19,United States,17761
+640,32,0,United States,17761
+641,32,1,United States,17761
+642,32,2,United States,17761
+643,32,3,United States,17761
+644,32,4,United States,17761
+645,32,5,United States,17761
+646,32,6,United States,17761
+647,32,7,United States,17761
+648,32,8,United States,17761
+649,32,9,United States,17761
+650,32,10,United States,17761
+651,32,11,United States,17761
+652,32,12,United States,17761
+653,32,13,United States,17761
+654,32,14,United States,17761
+655,32,15,United States,17761
+656,32,16,United States,17761
+657,32,17,United States,17761
+658,32,18,United States,17761
+659,32,19,United States,17761
+660,33,0,United States,17761
+661,33,1,United States,17761
+662,33,2,United States,17761
+663,33,3,United States,17761
+664,33,4,United States,17761
+665,33,5,United States,17761
+666,33,6,United States,17761
+667,33,7,United States,17761
+668,33,8,United States,17761
+669,33,9,United States,17761
+670,33,10,United States,17761
+671,33,11,United States,17761
+672,33,12,United States,17761
+673,33,13,United States,17761
+674,33,14,United States,17761
+675,33,15,United States,17761
+676,33,16,United States,17761
+677,33,17,United States,17761
+678,33,18,United States,17761
+679,33,19,United States,17761
+680,34,0,United States,17761
+681,34,1,United States,17761
+682,34,2,United Kingdom,9018
+683,34,3,United Kingdom,9018
+684,34,4,United Kingdom,9018
+685,34,5,United Kingdom,9018
+686,34,6,United Kingdom,9018
+687,34,7,United Kingdom,9018
+688,34,8,United Kingdom,9018
+689,34,9,United Kingdom,9018
+690,34,10,United Kingdom,9018
+691,34,11,United Kingdom,9018
+692,34,12,United Kingdom,9018
+693,34,13,United Kingdom,9018
+694,34,14,United Kingdom,9018
+695,34,15,United Kingdom,9018
+696,34,16,United Kingdom,9018
+697,34,17,United Kingdom,9018
+698,34,18,United Kingdom,9018
+699,34,19,United Kingdom,9018
+700,35,0,United Kingdom,9018
+701,35,1,United Kingdom,9018
+702,35,2,United Kingdom,9018
+703,35,3,United Kingdom,9018
+704,35,4,United Kingdom,9018
+705,35,5,United Kingdom,9018
+706,35,6,United Kingdom,9018
+707,35,7,United Kingdom,9018
+708,35,8,United Kingdom,9018
+709,35,9,United Kingdom,9018
+710,35,10,United Kingdom,9018
+711,35,11,United Kingdom,9018
+712,35,12,United Kingdom,9018
+713,35,13,United Kingdom,9018
+714,35,14,United Kingdom,9018
+715,35,15,United Kingdom,9018
+716,35,16,United Kingdom,9018
+717,35,17,United Kingdom,9018
+718,35,18,United Kingdom,9018
+719,35,19,United Kingdom,9018
+720,36,0,United Kingdom,9018
+721,36,1,United Kingdom,9018
+722,36,2,United Kingdom,9018
+723,36,3,United Kingdom,9018
+724,36,4,United Kingdom,9018
+725,36,5,United Kingdom,9018
+726,36,6,United Kingdom,9018
+727,36,7,United Kingdom,9018
+728,36,8,United Kingdom,9018
+729,36,9,United Kingdom,9018
+730,36,10,United Kingdom,9018
+731,36,11,United Kingdom,9018
+732,36,12,United Kingdom,9018
+733,36,13,United Kingdom,9018
+734,36,14,United Kingdom,9018
+735,36,15,United Kingdom,9018
+736,36,16,United Kingdom,9018
+737,36,17,United Kingdom,9018
+738,36,18,United Kingdom,9018
+739,36,19,United Kingdom,9018
+740,37,0,United Kingdom,9018
+741,37,1,United Kingdom,9018
+742,37,2,United Kingdom,9018
+743,37,3,United Kingdom,9018
+744,37,4,United Kingdom,9018
+745,37,5,United Kingdom,9018
+746,37,6,United Kingdom,9018
+747,37,7,United Kingdom,9018
+748,37,8,United Kingdom,9018
+749,37,9,United Kingdom,9018
+750,37,10,United Kingdom,9018
+751,37,11,United Kingdom,9018
+752,37,12,United Kingdom,9018
+753,37,13,United Kingdom,9018
+754,37,14,United Kingdom,9018
+755,37,15,United Kingdom,9018
+756,37,16,United Kingdom,9018
+757,37,17,United Kingdom,9018
+758,37,18,United Kingdom,9018
+759,37,19,United Kingdom,9018
+760,38,0,United Kingdom,9018
+761,38,1,United Kingdom,9018
+762,38,2,United Kingdom,9018
+763,38,3,United Kingdom,9018
+764,38,4,United Kingdom,9018
+765,38,5,United Kingdom,9018
+766,38,6,United Kingdom,9018
+767,38,7,United Kingdom,9018
+768,38,8,United Kingdom,9018
+769,38,9,United Kingdom,9018
+770,38,10,United Kingdom,9018
+771,38,11,United Kingdom,9018
+772,38,12,United Kingdom,9018
+773,38,13,United Kingdom,9018
+774,38,14,United Kingdom,9018
+775,38,15,United Kingdom,9018
+776,38,16,United Kingdom,9018
+777,38,17,United Kingdom,9018
+778,38,18,United Kingdom,9018
+779,38,19,United Kingdom,9018
+780,39,0,United Kingdom,9018
+781,39,1,United Kingdom,9018
+782,39,2,United Kingdom,9018
+783,39,3,United Kingdom,9018
+784,39,4,United Kingdom,9018
+785,39,5,United Kingdom,9018
+786,39,6,United Kingdom,9018
+787,39,7,United Kingdom,9018
+788,39,8,United Kingdom,9018
+789,39,9,United Kingdom,9018
+790,39,10,United Kingdom,9018
+791,39,11,United Kingdom,9018
+792,39,12,United Kingdom,9018
+793,39,13,United Kingdom,9018
+794,39,14,United Kingdom,9018
+795,39,15,United Kingdom,9018
+796,39,16,United Kingdom,9018
+797,39,17,United Kingdom,9018
+798,39,18,United Kingdom,9018
+799,39,19,United Kingdom,9018
+800,40,0,United Kingdom,9018
+801,40,1,United Kingdom,9018
+802,40,2,United Kingdom,9018
+803,40,3,United Kingdom,9018
+804,40,4,United Kingdom,9018
+805,40,5,United Kingdom,9018
+806,40,6,United Kingdom,9018
+807,40,7,United Kingdom,9018
+808,40,8,United Kingdom,9018
+809,40,9,United Kingdom,9018
+810,40,10,United Kingdom,9018
+811,40,11,United Kingdom,9018
+812,40,12,United Kingdom,9018
+813,40,13,United Kingdom,9018
+814,40,14,United Kingdom,9018
+815,40,15,United Kingdom,9018
+816,40,16,United Kingdom,9018
+817,40,17,United Kingdom,9018
+818,40,18,Sweden,8353
+819,40,19,Sweden,8353
+820,41,0,Sweden,8353
+821,41,1,Sweden,8353
+822,41,2,Sweden,8353
+823,41,3,Sweden,8353
+824,41,4,Sweden,8353
+825,41,5,Sweden,8353
+826,41,6,Sweden,8353
+827,41,7,Sweden,8353
+828,41,8,Sweden,8353
+829,41,9,Sweden,8353
+830,41,10,Sweden,8353
+831,41,11,Sweden,8353
+832,41,12,Sweden,8353
+833,41,13,Sweden,8353
+834,41,14,Sweden,8353
+835,41,15,Sweden,8353
+836,41,16,Sweden,8353
+837,41,17,Sweden,8353
+838,41,18,Sweden,8353
+839,41,19,Sweden,8353
+840,42,0,Sweden,8353
+841,42,1,Sweden,8353
+842,42,2,Sweden,8353
+843,42,3,Sweden,8353
+844,42,4,Sweden,8353
+845,42,5,Sweden,8353
+846,42,6,Sweden,8353
+847,42,7,Sweden,8353
+848,42,8,Sweden,8353
+849,42,9,Sweden,8353
+850,42,10,Sweden,8353
+851,42,11,Sweden,8353
+852,42,12,Sweden,8353
+853,42,13,Sweden,8353
+854,42,14,Sweden,8353
+855,42,15,Sweden,8353
+856,42,16,Sweden,8353
+857,42,17,Sweden,8353
+858,42,18,Sweden,8353
+859,42,19,Sweden,8353
+860,43,0,Sweden,8353
+861,43,1,Sweden,8353
+862,43,2,Sweden,8353
+863,43,3,Sweden,8353
+864,43,4,Sweden,8353
+865,43,5,Sweden,8353
+866,43,6,Sweden,8353
+867,43,7,Sweden,8353
+868,43,8,Sweden,8353
+869,43,9,Sweden,8353
+870,43,10,Sweden,8353
+871,43,11,Sweden,8353
+872,43,12,Sweden,8353
+873,43,13,Sweden,8353
+874,43,14,Sweden,8353
+875,43,15,Sweden,8353
+876,43,16,Sweden,8353
+877,43,17,Sweden,8353
+878,43,18,Sweden,8353
+879,43,19,Sweden,8353
+880,44,0,Sweden,8353
+881,44,1,Sweden,8353
+882,44,2,Sweden,8353
+883,44,3,Sweden,8353
+884,44,4,Sweden,8353
+885,44,5,Sweden,8353
+886,44,6,Sweden,8353
+887,44,7,Sweden,8353
+888,44,8,Sweden,8353
+889,44,9,Sweden,8353
+890,44,10,Sweden,8353
+891,44,11,Sweden,8353
+892,44,12,Sweden,8353
+893,44,13,Sweden,8353
+894,44,14,Sweden,8353
+895,44,15,Sweden,8353
+896,44,16,Sweden,8353
+897,44,17,Sweden,8353
+898,44,18,Sweden,8353
+899,44,19,Sweden,8353
+900,45,0,Sweden,8353
+901,45,1,Sweden,8353
+902,45,2,Sweden,8353
+903,45,3,Sweden,8353
+904,45,4,Sweden,8353
+905,45,5,Sweden,8353
+906,45,6,Sweden,8353
+907,45,7,Sweden,8353
+908,45,8,Sweden,8353
+909,45,9,Sweden,8353
+910,45,10,Sweden,8353
+911,45,11,Sweden,8353
+912,45,12,Sweden,8353
+913,45,13,Sweden,8353
+914,45,14,Sweden,8353
+915,45,15,Sweden,8353
+916,45,16,Sweden,8353
+917,45,17,Sweden,8353
+918,45,18,Sweden,8353
+919,45,19,Sweden,8353
+920,46,0,Sweden,8353
+921,46,1,Sweden,8353
+922,46,2,Sweden,8353
+923,46,3,Sweden,8353
+924,46,4,Sweden,8353
+925,46,5,Sweden,8353
+926,46,6,Sweden,8353
+927,46,7,Sweden,8353
+928,46,8,Sweden,8353
+929,46,9,Sweden,8353
+930,46,10,Sweden,8353
+931,46,11,Sweden,8353
+932,46,12,Sweden,8353
+933,46,13,Sweden,8353
+934,46,14,Sweden,8353
+935,46,15,Sweden,8353
+936,46,16,Sweden,8353
+937,46,17,Sweden,8353
+938,46,18,Sweden,8353
+939,46,19,Sweden,8353
+940,47,0,Sweden,8353
+941,47,1,Sweden,8353
+942,47,2,Sweden,8353
+943,47,3,Sweden,8353
+944,47,4,Other countries,3410
+945,47,5,Other countries,3410
+946,47,6,Other countries,3410
+947,47,7,Other countries,3410
+948,47,8,Other countries,3410
+949,47,9,Other countries,3410
+950,47,10,Other countries,3410
+951,47,11,Other countries,3410
+952,47,12,Other countries,3410
+953,47,13,Other countries,3410
+954,47,14,Other countries,3410
+955,47,15,Other countries,3410
+956,47,16,Other countries,3410
+957,47,17,Other countries,3410
+958,47,18,Other countries,3410
+959,47,19,Other countries,3410
+960,48,0,Other countries,3410
+961,48,1,Other countries,3410
+962,48,2,Other countries,3410
+963,48,3,Other countries,3410
+964,48,4,Other countries,3410
+965,48,5,Other countries,3410
+966,48,6,Other countries,3410
+967,48,7,Other countries,3410
+968,48,8,Other countries,3410
+969,48,9,Other countries,3410
+970,48,10,Other countries,3410
+971,48,11,Other countries,3410
+972,48,12,Other countries,3410
+973,48,13,Other countries,3410
+974,48,14,Other countries,3410
+975,48,15,Other countries,3410
+976,48,16,Other countries,3410
+977,48,17,Other countries,3410
+978,48,18,Other countries,3410
+979,48,19,Other countries,3410
+980,49,0,Other countries,3410
+981,49,1,Other countries,3410
+982,49,2,Other countries,3410
+983,49,3,Other countries,3410
+984,49,4,Other countries,3410
+985,49,5,Other countries,3410
+986,49,6,Other countries,3410
+987,49,7,Other countries,3410
+988,49,8,Other countries,3410
+989,49,9,Other countries,3410
+990,49,10,Other countries,3410
+991,49,11,Other countries,3410
+992,49,12,Other countries,3410
+993,49,13,Other countries,3410
+994,49,14,Other countries,3410
+995,49,15,Other countries,3410
+996,49,16,Australia,278
+997,49,17,Australia,278
+998,49,18,Australia,278
+999,49,19,Australia,278

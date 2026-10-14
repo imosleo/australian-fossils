@@ -1,0 +1,334 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Each kind of life has its own window in Australia's rocks",
+    "subtitle": "Bars run from the oldest to the youngest fossil record of each group (the rarest 2% at each end left out). Dots mark the middle record."
+  },
+  "vconcat": [
+    {
+      "width": 840,
+      "height": 30,
+      "data": {
+        "url": "data/periods.csv",
+        "format": {
+          "parse": {
+            "start_ma": "number",
+            "end_ma": "number"
+          }
+        }
+      },
+      "transform": [
+        {
+          "calculate": "min(datum.start_ma, 545)",
+          "as": "start_shown"
+        },
+        {
+          "calculate": "(datum.start_shown + datum.end_ma) / 2",
+          "as": "middle"
+        },
+        {
+          "calculate": "datum.start_shown - datum.end_ma > 40 ? datum.period : ''",
+          "as": "label"
+        }
+      ],
+      "layer": [
+        {
+          "mark": {
+            "type": "rect",
+            "stroke": "white",
+            "strokeWidth": 1
+          },
+          "encoding": {
+            "x": {
+              "field": "start_shown",
+              "type": "quantitative",
+              "scale": {
+                "domain": [
+                  545,
+                  0
+                ]
+              },
+              "axis": null
+            },
+            "x2": {
+              "field": "end_ma"
+            },
+            "color": {
+              "field": "colour",
+              "type": "nominal",
+              "scale": null
+            },
+            "tooltip": [
+              {
+                "field": "period",
+                "type": "nominal",
+                "title": "Period"
+              },
+              {
+                "field": "era",
+                "type": "nominal",
+                "title": "Era"
+              },
+              {
+                "field": "start_ma",
+                "type": "quantitative",
+                "title": "Began (million years ago)",
+                "format": ",.0f"
+              },
+              {
+                "field": "end_ma",
+                "type": "quantitative",
+                "title": "Ended (million years ago)",
+                "format": ",.0f"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "fontSize": 10.5,
+            "fontWeight": 600,
+            "color": "#2B2620"
+          },
+          "encoding": {
+            "x": {
+              "field": "middle",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "label"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "width": 840,
+      "height": 290,
+      "layer": [
+        {
+          "data": {
+            "url": "data/group_ranges.csv"
+          },
+          "transform": [
+            {
+              "calculate": "min(datum.oldest_ma, 545)",
+              "as": "oldest_shown"
+            }
+          ],
+          "mark": {
+            "type": "bar",
+            "height": 14,
+            "cornerRadius": 3,
+            "color": "#8C7B65",
+            "opacity": 0.85
+          },
+          "encoding": {
+            "y": {
+              "field": "group",
+              "type": "nominal",
+              "title": null,
+              "sort": [
+                "Arthropods",
+                "Lamp shells",
+                "Molluscs",
+                "Corals",
+                "Animals with backbones",
+                "Plants",
+                "Other and unclassified"
+              ],
+              "axis": {
+                "labelFontSize": 12,
+                "labelColor": "#2B2620",
+                "domain": false,
+                "ticks": false
+              },
+              "scale": {
+                "paddingOuter": 1
+              }
+            },
+            "x": {
+              "field": "oldest_shown",
+              "type": "quantitative",
+              "title": "Million years ago",
+              "scale": {
+                "domain": [
+                  545,
+                  0
+                ]
+              },
+              "axis": {
+                "grid": false,
+                "values": [
+                  500,
+                  400,
+                  300,
+                  200,
+                  100,
+                  0
+                ]
+              }
+            },
+            "x2": {
+              "field": "youngest_ma"
+            },
+            "tooltip": [
+              {
+                "field": "group",
+                "type": "nominal",
+                "title": "Fossil group"
+              },
+              {
+                "field": "oldest_ma",
+                "type": "quantitative",
+                "title": "Oldest record (million years ago)",
+                "format": ",.0f"
+              },
+              {
+                "field": "youngest_ma",
+                "type": "quantitative",
+                "title": "Youngest record (million years ago)",
+                "format": ",.1f"
+              },
+              {
+                "field": "records",
+                "type": "quantitative",
+                "title": "Fossil records",
+                "format": ","
+              }
+            ]
+          }
+        },
+        {
+          "data": {
+            "url": "data/group_ranges.csv"
+          },
+          "mark": {
+            "type": "circle",
+            "size": 70,
+            "color": "#2B2620"
+          },
+          "encoding": {
+            "y": {
+              "field": "group",
+              "type": "nominal",
+              "sort": [
+                "Arthropods",
+                "Lamp shells",
+                "Molluscs",
+                "Corals",
+                "Animals with backbones",
+                "Plants",
+                "Other and unclassified"
+              ]
+            },
+            "x": {
+              "field": "median_ma",
+              "type": "quantitative"
+            },
+            "tooltip": [
+              {
+                "field": "group",
+                "type": "nominal",
+                "title": "Fossil group"
+              },
+              {
+                "field": "median_ma",
+                "type": "quantitative",
+                "title": "Middle record (million years ago)",
+                "format": ",.0f"
+              }
+            ]
+          }
+        },
+        {
+          "data": {
+            "values": [
+              {
+                "ma": 252,
+                "note": [
+                  "Great Dying,",
+                  "252 million years ago"
+                ]
+              },
+              {
+                "ma": 66,
+                "note": [
+                  "Dinosaurs die out,",
+                  "66 million years ago"
+                ]
+              }
+            ]
+          },
+          "layer": [
+            {
+              "mark": {
+                "type": "rule",
+                "strokeDash": [
+                  4,
+                  3
+                ],
+                "color": "#B03A2E",
+                "strokeWidth": 1.5
+              },
+              "encoding": {
+                "x": {
+                  "field": "ma",
+                  "type": "quantitative"
+                }
+              }
+            },
+            {
+              "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "top",
+                "dx": 4,
+                "y": 2,
+                "fontSize": 10.5,
+                "fontStyle": "italic",
+                "color": "#B03A2E",
+                "lineHeight": 13
+              },
+              "encoding": {
+                "x": {
+                  "field": "ma",
+                  "type": "quantitative"
+                },
+                "text": {
+                  "field": "note"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "spacing": 4,
+  "config": {
+    "font": "Open Sans",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Open Sans",
+      "fontSize": 16,
+      "fontWeight": 700,
+      "color": "#2B2620",
+      "anchor": "start",
+      "subtitleFontSize": 12.5,
+      "subtitleColor": "#5B5348",
+      "offset": 12
+    },
+    "axis": {
+      "labelFontSize": 11.5,
+      "titleFontSize": 12,
+      "titleColor": "#4A4238",
+      "labelColor": "#4A4238",
+      "domainColor": "#B8AE9F",
+      "tickColor": "#B8AE9F"
+    }
+  }
+}

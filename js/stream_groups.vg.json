@@ -1,0 +1,255 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Life in the record rises and falls, with two great collapses",
+    "subtitle": [
+      "Fossil records in each 10 million year slice, by group. Click a group in the legend to pick it out.",
+      "The last 10 million years hold the most, because young rocks lie near the surface and are less worn away."
+    ]
+  },
+  "width": "container",
+  "height": 330,
+  "layer": [
+    {
+      "data": {
+        "url": "data/groups_through_time.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.million_years_ago <= 540"
+        },
+        {
+          "impute": "records",
+          "key": "million_years_ago",
+          "groupby": [
+            "group"
+          ],
+          "value": 0
+        }
+      ],
+      "params": [
+        {
+          "name": "group_highlight",
+          "select": {
+            "type": "point",
+            "fields": [
+              "group"
+            ]
+          },
+          "bind": "legend"
+        }
+      ],
+      "mark": {
+        "type": "area",
+        "interpolate": "monotone"
+      },
+      "encoding": {
+        "x": {
+          "field": "million_years_ago",
+          "type": "quantitative",
+          "title": "Million years ago",
+          "scale": {
+            "domain": [
+              540,
+              0
+            ]
+          },
+          "axis": {
+            "grid": false,
+            "values": [
+              500,
+              400,
+              300,
+              200,
+              100,
+              0
+            ]
+          }
+        },
+        "y": {
+          "aggregate": "sum",
+          "field": "records",
+          "type": "quantitative",
+          "stack": "center",
+          "axis": null
+        },
+        "color": {
+          "field": "group",
+          "type": "nominal",
+          "title": "Fossil group",
+          "scale": {
+            "domain": [
+              "Lamp shells",
+              "Molluscs",
+              "Corals",
+              "Arthropods",
+              "Animals with backbones",
+              "Plants",
+              "Other and unclassified"
+            ],
+            "range": [
+              "#66C2A5",
+              "#FC8D62",
+              "#E78AC3",
+              "#8DA0CB",
+              "#A6774E",
+              "#A6D854",
+              "#C8C2B8"
+            ]
+          }
+        },
+        "opacity": {
+          "condition": {
+            "param": "group_highlight",
+            "value": 0.95
+          },
+          "value": 0.15
+        },
+        "tooltip": [
+          {
+            "field": "group",
+            "type": "nominal",
+            "title": "Fossil group"
+          },
+          {
+            "field": "million_years_ago",
+            "type": "quantitative",
+            "title": "Around (million years ago)"
+          },
+          {
+            "aggregate": "sum",
+            "field": "records",
+            "type": "quantitative",
+            "title": "Fossil records"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "ma": 252,
+            "note": [
+              "The Great Dying, 252 million years ago:",
+              "most sea life wiped out"
+            ]
+          },
+          {
+            "ma": 66,
+            "note": [
+              "Asteroid strike, 66 million years ago:",
+              "dinosaurs die out"
+            ]
+          }
+        ]
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "rule",
+            "strokeDash": [
+              4,
+              3
+            ],
+            "color": "#B03A2E",
+            "strokeWidth": 1.5
+          },
+          "encoding": {
+            "x": {
+              "field": "ma",
+              "type": "quantitative"
+            }
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "baseline": "top",
+            "dx": 5,
+            "y": 4,
+            "fontSize": 11,
+            "fontStyle": "italic",
+            "color": "#B03A2E",
+            "lineHeight": 14
+          },
+          "encoding": {
+            "x": {
+              "field": "ma",
+              "type": "quantitative"
+            },
+            "text": {
+              "field": "note"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "ma": 262,
+            "note": [
+              "Permian seas: lamp shells at their peak.",
+              "Records drop 93% after the Great Dying."
+            ]
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "top",
+        "y": 50,
+        "fontSize": 11,
+        "fontStyle": "italic",
+        "color": "#4A4238",
+        "lineHeight": 14
+      },
+      "encoding": {
+        "x": {
+          "field": "ma",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "note"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Open Sans",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Open Sans",
+      "fontSize": 16,
+      "fontWeight": 700,
+      "color": "#2B2620",
+      "anchor": "start",
+      "subtitleFontSize": 12.5,
+      "subtitleColor": "#5B5348",
+      "offset": 12
+    },
+    "axis": {
+      "labelFontSize": 11.5,
+      "titleFontSize": 12,
+      "titleColor": "#4A4238",
+      "labelColor": "#4A4238",
+      "domainColor": "#B8AE9F",
+      "tickColor": "#B8AE9F"
+    },
+    "legend": {
+      "orient": "bottom",
+      "columns": 4,
+      "labelFontSize": 11.5,
+      "titleFontSize": 12,
+      "symbolType": "square",
+      "titleColor": "#2B2620",
+      "labelColor": "#4A4238"
+    }
+  }
+}

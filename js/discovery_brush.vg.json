@@ -1,0 +1,244 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "data/fossil_sites.csv",
+    "format": {
+      "parse": {
+        "first_published": "number",
+        "records": "number"
+      }
+    }
+  },
+  "vconcat": [
+    {
+      "width": 895,
+      "height": 400,
+      "title": {
+        "text": "Where the fossils of your chosen years were found",
+        "subtitle": "Drag across the timeline below to choose years. Circles are sized by fossil records."
+      },
+      "projection": {
+        "type": "equalEarth",
+        "rotate": [
+          -134,
+          0,
+          0
+        ]
+      },
+      "layer": [
+        {
+          "data": {
+            "url": "js/australian_states.topojson",
+            "format": {
+              "type": "topojson",
+              "feature": "australian_states"
+            }
+          },
+          "mark": {
+            "type": "geoshape",
+            "fill": "#E6DFD3",
+            "stroke": "white",
+            "strokeWidth": 1.5
+          }
+        },
+        {
+          "transform": [
+            {
+              "filter": "isValid(datum.first_published)"
+            },
+            {
+              "filter": {
+                "param": "year_brush"
+              }
+            }
+          ],
+          "mark": {
+            "type": "circle",
+            "opacity": 0.55,
+            "stroke": "white",
+            "strokeWidth": 0.4
+          },
+          "encoding": {
+            "longitude": {
+              "field": "longitude",
+              "type": "quantitative"
+            },
+            "latitude": {
+              "field": "latitude",
+              "type": "quantitative"
+            },
+            "size": {
+              "field": "records",
+              "type": "quantitative",
+              "scale": {
+                "type": "threshold",
+                "domain": [
+                  5,
+                  20,
+                  50,
+                  100
+                ],
+                "range": [
+                  8,
+                  30,
+                  80,
+                  160,
+                  300
+                ]
+              },
+              "legend": null
+            },
+            "color": {
+              "field": "era",
+              "type": "nominal",
+              "title": "Era",
+              "scale": {
+                "domain": [
+                  "Precambrian",
+                  "Palaeozoic",
+                  "Mesozoic",
+                  "Cenozoic"
+                ],
+                "range": [
+                  "#8E5BA6",
+                  "#3E8E63",
+                  "#2F7EA8",
+                  "#D08A2E"
+                ]
+              },
+              "legend": {
+                "orient": "none",
+                "legendX": 0,
+                "legendY": 10
+              }
+            },
+            "tooltip": [
+              {
+                "field": "state",
+                "type": "nominal",
+                "title": "State"
+              },
+              {
+                "field": "period",
+                "type": "nominal",
+                "title": "Geological period"
+              },
+              {
+                "field": "records",
+                "type": "quantitative",
+                "title": "Fossil records"
+              },
+              {
+                "field": "first_published",
+                "type": "nominal",
+                "title": "First described in"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "width": 895,
+      "height": 140,
+      "title": {
+        "text": "New fossil records by year they were first described in a scientific paper",
+        "subtitle": [
+          "Drag across this chart to filter the map. Double-click to clear.",
+          "Recent years look low because new papers take time to be added to the database."
+        ],
+        "fontSize": 13
+      },
+      "transform": [
+        {
+          "filter": "isValid(datum.first_published)"
+        }
+      ],
+      "params": [
+        {
+          "name": "year_brush",
+          "select": {
+            "type": "interval",
+            "encodings": [
+              "x"
+            ]
+          }
+        }
+      ],
+      "mark": {
+        "type": "bar",
+        "color": "#8C7B65",
+        "opacity": 0.85
+      },
+      "encoding": {
+        "x": {
+          "field": "first_published",
+          "type": "quantitative",
+          "bin": {
+            "step": 5,
+            "extent": [
+              1820,
+              2030
+            ]
+          },
+          "title": null,
+          "axis": {
+            "format": "d",
+            "values": [
+              1825,
+              1850,
+              1875,
+              1900,
+              1925,
+              1950,
+              1975,
+              2000,
+              2025
+            ],
+            "grid": false
+          }
+        },
+        "y": {
+          "aggregate": "sum",
+          "field": "records",
+          "type": "quantitative",
+          "title": "Fossil records",
+          "axis": {
+            "tickCount": 3,
+            "grid": false
+          }
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Open Sans",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Open Sans",
+      "fontSize": 16,
+      "fontWeight": 700,
+      "color": "#2B2620",
+      "anchor": "start",
+      "subtitleFontSize": 12.5,
+      "subtitleColor": "#5B5348",
+      "offset": 10
+    },
+    "axis": {
+      "labelFontSize": 11.5,
+      "titleFontSize": 12,
+      "titleColor": "#4A4238",
+      "labelColor": "#4A4238",
+      "domainColor": "#B8AE9F",
+      "tickColor": "#B8AE9F"
+    },
+    "legend": {
+      "labelFontSize": 11.5,
+      "titleFontSize": 12,
+      "titleColor": "#2B2620",
+      "labelColor": "#4A4238"
+    }
+  }
+}

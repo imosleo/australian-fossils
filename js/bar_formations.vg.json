@@ -1,0 +1,153 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "The ten richest rock layers are mostly from the Palaeozoic era",
+    "subtitle": "A rock formation is one named layer of rock. Bars show its fossil records, coloured by the era it formed in."
+  },
+  "data": {
+    "url": "data/top_formations.csv"
+  },
+  "width": "container",
+  "height": 300,
+  "encoding": {
+    "y": {
+      "field": "formation",
+      "type": "nominal",
+      "title": null,
+      "sort": {
+        "field": "records",
+        "op": "sum",
+        "order": "descending"
+      },
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12,
+        "labelColor": "#2B2620"
+      }
+    },
+    "x": {
+      "field": "records",
+      "type": "quantitative",
+      "title": "Fossil records",
+      "axis": {
+        "grid": true,
+        "gridColor": "#EEE8DE",
+        "values": [
+          0,
+          300,
+          600,
+          900,
+          1200
+        ]
+      },
+      "scale": {
+        "domain": [
+          0,
+          1400
+        ]
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "bar",
+        "height": 16,
+        "cornerRadiusEnd": 2
+      },
+      "encoding": {
+        "color": {
+          "field": "era",
+          "type": "nominal",
+          "title": "Era",
+          "scale": {
+            "domain": [
+              "Precambrian",
+              "Palaeozoic",
+              "Mesozoic",
+              "Cenozoic"
+            ],
+            "range": [
+              "#8E5BA6",
+              "#3E8E63",
+              "#2F7EA8",
+              "#D08A2E"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "formation",
+            "type": "nominal",
+            "title": "Rock formation"
+          },
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "era",
+            "type": "nominal",
+            "title": "Era"
+          },
+          {
+            "field": "records",
+            "type": "quantitative",
+            "title": "Fossil records",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 5,
+        "fontSize": 11,
+        "color": "#4A4238"
+      },
+      "encoding": {
+        "text": {
+          "field": "state"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Open Sans",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Open Sans",
+      "fontSize": 16,
+      "fontWeight": 700,
+      "color": "#2B2620",
+      "anchor": "start",
+      "subtitleFontSize": 12.5,
+      "subtitleColor": "#5B5348",
+      "offset": 12
+    },
+    "axis": {
+      "labelFontSize": 11.5,
+      "titleFontSize": 12,
+      "titleColor": "#4A4238",
+      "labelColor": "#4A4238",
+      "domainColor": "#B8AE9F",
+      "tickColor": "#B8AE9F"
+    },
+    "legend": {
+      "labelFontSize": 11.5,
+      "titleFontSize": 12,
+      "titleColor": "#2B2620",
+      "labelColor": "#4A4238"
+    }
+  }
+}

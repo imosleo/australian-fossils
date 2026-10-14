@@ -1,0 +1,113 @@
+/* layout.css: page grid, spacing and backgrounds (fonts live in style.css) */
+
+html, body {
+  margin: 0;
+  background-color: #EDE7DC;
+}
+
+/* one centred page, wide enough for the maps but narrow enough for a small laptop */
+.page {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 40px 40px 40px;
+  background-color: #FFFDF8;
+  box-sizing: border-box;
+}
+
+/* rows of the Pure.css grid */
+.pure-g {
+  margin-bottom: 36px;
+}
+
+/* every chart div fills its column (Vega-Lite "width": "container") */
+.vis-container {
+  width: 100%;
+}
+
+/* text column on the left of a chart, chart column on the right */
+.description-left {
+  padding-right: 28px;
+}
+
+/* header band */
+.hero {
+  margin: 0 -40px 36px -40px;
+  padding: 56px 40px 40px 40px;
+  background-color: #3A332B;
+}
+
+/* key numbers in the introduction */
+.stat {
+  padding: 14px 16px 14px 0;
+  box-sizing: border-box;
+}
+
+.stat-box {
+  border-left: 4px solid #C9B79C;
+  padding: 4px 0 4px 14px;
+}
+
+/* glossary cards */
+.term {
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+/* each story section starts with a thin rule */
+.section-rule {
+  border: none;
+  border-top: 2px solid #E6DFD3;
+  margin: 0 0 28px 0;
+}
+
+/* rows of cards: each card has a 24px gutter on its right, and the row is pulled 24px wider
+   so the last card still lines up with the right edge of the charts */
+.gutter-row {
+  margin-right: -24px;
+}
+
+/* protected places list */
+.place {
+  padding: 10px 24px 10px 0;
+  box-sizing: border-box;
+}
+
+.place-box {
+  border-left: 4px solid #2B2620;
+  padding: 2px 0 2px 12px;
+}
+
+/* takeaways at the end */
+.takeaway {
+  padding-right: 24px;
+  box-sizing: border-box;
+}
+
+.takeaway-box {
+  background-color: #F4EFE6;
+  padding: 16px 18px;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+footer {
+  border-top: 2px solid #E6DFD3;
+  padding-top: 20px;
+}
+
+/* on narrow screens the columns stack, so drop the side padding */
+@media screen and (max-width: 767px) {
+  .page {
+    padding: 0 16px 24px 16px;
+  }
+  .hero {
+    margin: 0 -16px 28px -16px;
+    padding: 36px 16px 28px 16px;
+  }
+  .description-left {
+    padding-right: 0;
+  }
+  .gutter-row {
+    margin-right: 0;
+  }
+}

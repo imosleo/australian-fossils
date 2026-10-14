@@ -1,0 +1,116 @@
+/* style.css: typefaces, sizes and colours of text */
+
+/* Cinzel is based on carved Roman letters, so it suits a page about things written in stone.
+   Open Sans is the unit's body font: plain, with a tall x-height that reads well on screen. */
+body * {
+  font-family: 'Open Sans', sans-serif;
+  color: #2B2620;
+}
+
+h1, h2, .stat-number {
+  font-family: 'Cinzel', serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 52px;
+  line-height: 1.1;
+  margin: 0 0 14px 0;
+  color: #FFFDF8;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  font-size: 20px;
+  line-height: 1.45;
+  max-width: 40em;
+  margin: 0 0 18px 0;
+  color: #E6DFD3;
+}
+
+.byline {
+  font-size: 14px;
+  margin: 0;
+  color: #C9B79C;
+}
+
+h2 {
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 0 0 12px 0;
+}
+
+h3 {
+  font-size: 17px;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+}
+
+/* body text: about 60 to 75 characters per line, leading about 150% */
+p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 14px 0;
+  max-width: 42em;
+}
+
+.lead {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.kicker {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #8C7B65;
+  margin: 0 0 6px 0;
+}
+
+.stat-number {
+  font-size: 34px;
+  line-height: 1.1;
+  margin: 0;
+}
+
+.stat-label {
+  font-size: 14px;
+  line-height: 1.45;
+  margin: 4px 0 0 0;
+  color: #4A4238;
+}
+
+.how-to {
+  font-size: 14px;
+  font-style: italic;
+  color: #5B5348;
+}
+
+.small-font,
+.small-font p,
+.small-font li {
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: #4A4238;
+}
+
+/* coloured words that act as a legend, matching the era colours in the charts */
+.era-precambrian { color: #8E5BA6; font-weight: 700; }
+.era-palaeozoic { color: #3E8E63; font-weight: 700; }
+.era-mesozoic { color: #2F7EA8; font-weight: 700; }
+.era-cenozoic { color: #D08A2E; font-weight: 700; }
+.australia-red { color: #B03A2E; font-weight: 700; }
+
+a {
+  color: #1D4E6E;
+}
+
+footer ul {
+  padding-left: 18px;
+  margin: 0 0 14px 0;
+}
+
+footer li {
+  margin-bottom: 6px;
+}

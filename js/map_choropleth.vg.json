@@ -1,0 +1,176 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Measured by land area, small Victoria and Tasmania are the richest fossil grounds",
+    "subtitle": "Fossil records per 10,000 square kilometres of land, so large and small states can be compared fairly"
+  },
+  "width": "container",
+  "height": 430,
+  "projection": {
+    "type": "equalEarth",
+    "rotate": [
+      -134,
+      0,
+      0
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "js/australian_states.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "australian_states"
+        }
+      },
+      "transform": [
+        {
+          "lookup": "properties.state",
+          "from": {
+            "data": {
+              "url": "data/state_summary.csv"
+            },
+            "key": "state",
+            "fields": [
+              "records",
+              "sites",
+              "area_sq_km"
+            ]
+          }
+        },
+        {
+          "calculate": "datum.records / datum.area_sq_km * 10000",
+          "as": "Records per 10,000 square kilometres"
+        }
+      ],
+      "mark": {
+        "type": "geoshape",
+        "stroke": "white",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "color": {
+          "field": "Records per 10,000 square kilometres",
+          "type": "quantitative",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              25,
+              50,
+              100,
+              250,
+              500
+            ],
+            "range": [
+              "#FFF7BC",
+              "#FEE391",
+              "#FEC44F",
+              "#FE9929",
+              "#D95F0E",
+              "#993404"
+            ]
+          },
+          "legend": {
+            "title": [
+              "Fossil records per",
+              "10,000 square kilometres"
+            ],
+            "format": ",.0f"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "properties.state",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "records",
+            "type": "quantitative",
+            "title": "Fossil records",
+            "format": ","
+          },
+          {
+            "field": "sites",
+            "type": "quantitative",
+            "title": "Fossil sites",
+            "format": ","
+          },
+          {
+            "field": "area_sq_km",
+            "type": "quantitative",
+            "title": "Land area (square kilometres)",
+            "format": ","
+          },
+          {
+            "field": "Records per 10,000 square kilometres",
+            "type": "quantitative",
+            "format": ",.0f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/state_summary.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.state != 'Australian Capital Territory'"
+        },
+        {
+          "calculate": "format(datum.records / datum.area_sq_km * 10000, ',.0f')",
+          "as": "rate"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 13,
+        "fontWeight": 700
+      },
+      "encoding": {
+        "longitude": {
+          "field": "label_longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "label_latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "rate"
+        },
+        "color": {
+          "condition": {
+            "test": "datum.records / datum.area_sq_km * 10000 > 250",
+            "value": "white"
+          },
+          "value": "#2B2620"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Open Sans",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Open Sans",
+      "fontSize": 16,
+      "fontWeight": 700,
+      "color": "#2B2620",
+      "anchor": "start",
+      "subtitleFontSize": 12.5,
+      "subtitleColor": "#5B5348",
+      "offset": 12
+    },
+    "legend": {
+      "orient": "left",
+      "labelFontSize": 11.5,
+      "titleFontSize": 12,
+      "titleColor": "#2B2620",
+      "labelColor": "#4A4238"
+    }
+  }
+}

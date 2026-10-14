@@ -1,0 +1,320 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Fossils turn up in every state, from the coasts to the outback",
+    "subtitle": "Each circle is one fossil site, sized by the number of fossil records found there. Stars mark nationally protected fossil places."
+  },
+  "width": "container",
+  "height": 560,
+  "params": [
+    {
+      "name": "era_selection",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Precambrian",
+          "Palaeozoic",
+          "Mesozoic",
+          "Cenozoic"
+        ],
+        "labels": [
+          "Show all eras",
+          "Precambrian (before 539 million years ago)",
+          "Palaeozoic (539 to 252 million years ago)",
+          "Mesozoic (252 to 66 million years ago)",
+          "Cenozoic (66 million years ago to today)"
+        ],
+        "name": "Show fossils from: "
+      }
+    }
+  ],
+  "projection": {
+    "type": "equalEarth",
+    "rotate": [
+      -134,
+      0,
+      0
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "js/australian_states.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "australian_states"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#E6DFD3",
+        "stroke": "white",
+        "strokeWidth": 1.5
+      },
+      "encoding": {
+        "tooltip": {
+          "field": "properties.state",
+          "type": "nominal",
+          "title": "State"
+        }
+      }
+    },
+    {
+      "data": {
+        "url": "data/fossil_sites.csv"
+      },
+      "transform": [
+        {
+          "filter": "era_selection == null || datum.era == era_selection"
+        }
+      ],
+      "mark": {
+        "type": "circle",
+        "opacity": 0.55,
+        "stroke": "white",
+        "strokeWidth": 0.4
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "records",
+          "type": "quantitative",
+          "title": "Fossil records at the site",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              5,
+              20,
+              50,
+              100
+            ],
+            "range": [
+              8,
+              30,
+              80,
+              160,
+              300
+            ]
+          }
+        },
+        "color": {
+          "field": "era",
+          "type": "nominal",
+          "title": "Era",
+          "scale": {
+            "domain": [
+              "Precambrian",
+              "Palaeozoic",
+              "Mesozoic",
+              "Cenozoic"
+            ],
+            "range": [
+              "#8E5BA6",
+              "#3E8E63",
+              "#2F7EA8",
+              "#D08A2E"
+            ]
+          }
+        },
+        "order": {
+          "field": "records",
+          "type": "quantitative",
+          "sort": "descending"
+        },
+        "tooltip": [
+          {
+            "field": "state",
+            "type": "nominal",
+            "title": "State"
+          },
+          {
+            "field": "period",
+            "type": "nominal",
+            "title": "Geological period"
+          },
+          {
+            "field": "age_ma",
+            "type": "quantitative",
+            "title": "Age (million years)",
+            "format": ",.0f"
+          },
+          {
+            "field": "main_group",
+            "type": "nominal",
+            "title": "Most common fossils"
+          },
+          {
+            "field": "records",
+            "type": "quantitative",
+            "title": "Fossil records"
+          },
+          {
+            "field": "first_published",
+            "type": "nominal",
+            "title": "First described in"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/fossil_heritage_places.csv"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        }
+      },
+      "layer": [
+        {
+          "mark": {
+            "type": "point",
+            "shape": "M0,-1L0.29,-0.4L0.95,-0.31L0.47,0.15L0.59,0.81L0,0.5L-0.59,0.81L-0.47,0.15L-0.95,-0.31L-0.29,-0.4Z",
+            "filled": true,
+            "size": 320,
+            "fill": "#2B2620",
+            "stroke": "white",
+            "strokeWidth": 1.2,
+            "opacity": 1
+          },
+          "encoding": {
+            "tooltip": [
+              {
+                "field": "place",
+                "type": "nominal",
+                "title": "Protected place"
+              },
+              {
+                "field": "state",
+                "type": "nominal",
+                "title": "State"
+              },
+              {
+                "field": "listed",
+                "type": "nominal",
+                "title": "On the National Heritage List since"
+              }
+            ]
+          }
+        },
+        {
+          "mark": {
+            "type": "text",
+            "align": "left",
+            "dx": 11,
+            "dy": 1,
+            "fontSize": 11.5,
+            "fontWeight": 600,
+            "color": "#2B2620"
+          },
+          "encoding": {
+            "text": {
+              "field": "label",
+              "type": "nominal"
+            }
+          },
+          "transform": [
+            {
+              "filter": "datum.label != 'Naracoorte Caves'"
+            }
+          ]
+        },
+        {
+          "transform": [
+            {
+              "filter": "datum.label == 'Naracoorte Caves'"
+            }
+          ],
+          "mark": {
+            "type": "text",
+            "align": "right",
+            "dx": -11,
+            "dy": 1,
+            "fontSize": 11.5,
+            "fontWeight": 600,
+            "color": "#2B2620"
+          },
+          "encoding": {
+            "text": {
+              "field": "label",
+              "type": "nominal"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "longitude": 117.6,
+            "latitude": -20.2,
+            "note": [
+              "Pilbara, Western Australia:",
+              "stromatolites 3.4 billion years old,",
+              "some of the oldest signs of life on Earth"
+            ]
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "fontSize": 11,
+        "fontStyle": "italic",
+        "color": "#4A4238",
+        "lineHeight": 14
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "note"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Open Sans",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Open Sans",
+      "fontSize": 16,
+      "fontWeight": 700,
+      "color": "#2B2620",
+      "anchor": "start",
+      "subtitleFontSize": 12.5,
+      "subtitleColor": "#5B5348",
+      "offset": 12
+    },
+    "legend": {
+      "orient": "left",
+      "labelFontSize": 11.5,
+      "titleFontSize": 12,
+      "titleColor": "#2B2620",
+      "labelColor": "#4A4238"
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "The lead in fossil discovery has passed from state to state",
+    "subtitle": ["Each state's rank by new fossil records described in each decade (1st is the most).", "Hover over a line to follow one state."]
+  },
+  "data": {"url": "data/state_decade.csv", "format": {"parse": {"records": "number", "decade": "number"}}},
+  "width": "container",
+  "height": 300,
+  "transform": [
+    {"window": [{"op": "rank", "as": "rank"}], "sort": [{"field": "records", "order": "descending"}], "groupby": ["decade"]},
+    {"calculate": "datum.decade + 's'", "as": "decade_label"}
+  ],
+  "encoding": {
+    "x": {"field": "decade", "type": "ordinal", "title": null, "axis": {"labelExpr": "datum.label + 's'", "labelAngle": 0, "domain": false, "ticks": false, "orient": "top", "labelFontSize": 12}},
+    "y": {"field": "rank", "type": "ordinal", "title": "Rank", "axis": {"labelExpr": "datum.label == '1' ? '1st' : datum.label == '2' ? '2nd' : datum.label == '3' ? '3rd' : datum.label + 'th'", "domain": false, "ticks": false}},
+    "color": {
+      "field": "state",
+      "type": "nominal",
+      "legend": null,
+      "scale": {
+        "domain": ["Queensland", "New South Wales", "Victoria", "Western Australia", "South Australia", "Northern Territory", "Tasmania", "Australian Capital Territory"],
+        "range": ["#7A1F3D", "#1F5F8B", "#2E7D4F", "#C1661C", "#B8AE9F", "#B8AE9F", "#B8AE9F", "#B8AE9F"]
+      }
+    }
+  },
+  "layer": [
+    {
+      "params": [{"name": "state_hover", "select": {"type": "point", "fields": ["state"], "on": "mouseover", "clear": "mouseout"}}],
+      "mark": {"type": "line", "strokeWidth": 3, "interpolate": "monotone"},
+      "encoding": {
+        "opacity": {"condition": {"param": "state_hover", "empty": true, "value": 1}, "value": 0.15}
+      }
+    },
+    {
+      "mark": {"type": "circle", "size": 120, "opacity": 1},
+      "encoding": {
+        "opacity": {"condition": {"param": "state_hover", "empty": true, "value": 1}, "value": 0.15},
+        "tooltip": [
+          {"field": "state", "type": "nominal", "title": "State"},
+          {"field": "decade_label", "type": "nominal", "title": "Decade"},
+          {"field": "records", "type": "quantitative", "title": "New fossil records", "format": ","},
+          {"field": "rank", "type": "ordinal", "title": "Rank"}
+        ]
+      }
+    },
+    {
+      "transform": [{"filter": "datum.decade == 2020"}],
+      "mark": {"type": "text", "align": "left", "dx": 10, "fontSize": 11.5, "fontWeight": 600},
+      "encoding": {"text": {"field": "state"}}
+    }
+  ],
+  "config": {
+    "font": "Open Sans",
+    "view": {"stroke": null},
+    "title": {"font": "Open Sans", "fontSize": 16, "fontWeight": 700, "color": "#2B2620", "anchor": "start", "subtitleFontSize": 12.5, "subtitleColor": "#5B5348", "offset": 12},
+    "axis": {"labelFontSize": 11.5, "titleFontSize": 12, "titleColor": "#4A4238", "labelColor": "#2B2620", "grid": false},
+    "padding": {"right": 150, "left": 5, "top": 5, "bottom": 5}
+  }
+}

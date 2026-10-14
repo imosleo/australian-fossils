@@ -1,0 +1,184 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Sea creatures fill the oldest periods, plants and backboned animals the youngest",
+    "subtitle": "Fossil records for each group in each geological period. Darker squares hold more records."
+  },
+  "data": {
+    "url": "data/period_group.csv",
+    "format": {
+      "parse": {
+        "records": "number"
+      }
+    }
+  },
+  "width": "container",
+  "height": 260,
+  "transform": [
+    {
+      "impute": "records",
+      "key": "period",
+      "groupby": [
+        "group"
+      ],
+      "value": 0
+    }
+  ],
+  "encoding": {
+    "x": {
+      "field": "period",
+      "type": "ordinal",
+      "title": null,
+      "sort": [
+        "Precambrian",
+        "Cambrian",
+        "Ordovician",
+        "Silurian",
+        "Devonian",
+        "Carboniferous",
+        "Permian",
+        "Triassic",
+        "Jurassic",
+        "Cretaceous",
+        "Palaeogene",
+        "Neogene",
+        "Quaternary"
+      ],
+      "axis": {
+        "orient": "top",
+        "labelAngle": -35,
+        "labelAlign": "left",
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 11.5
+      }
+    },
+    "y": {
+      "field": "group",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+        "Lamp shells",
+        "Corals",
+        "Arthropods",
+        "Molluscs",
+        "Animals with backbones",
+        "Plants",
+        "Other and unclassified"
+      ],
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12
+      }
+    }
+  },
+  "layer": [
+    {
+      "mark": {
+        "type": "rect",
+        "stroke": "white",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "color": {
+          "field": "records",
+          "type": "quantitative",
+          "title": "Fossil records",
+          "scale": {
+            "type": "threshold",
+            "domain": [
+              1,
+              100,
+              300,
+              1000,
+              2000
+            ],
+            "range": [
+              "#F2EEE8",
+              "#FFF7BC",
+              "#FEC44F",
+              "#FE9929",
+              "#D95F0E",
+              "#993404"
+            ]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "labelExpr": "datum.label == '1' ? '1' : datum.label"
+          }
+        },
+        "tooltip": [
+          {
+            "field": "period",
+            "type": "nominal",
+            "title": "Period"
+          },
+          {
+            "field": "group",
+            "type": "nominal",
+            "title": "Fossil group"
+          },
+          {
+            "field": "records",
+            "type": "quantitative",
+            "title": "Fossil records",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "transform": [
+        {
+          "filter": "datum.records >= 1000"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "fontSize": 10.5,
+        "fontWeight": 600
+      },
+      "encoding": {
+        "text": {
+          "field": "records",
+          "type": "quantitative",
+          "format": ","
+        },
+        "color": {
+          "condition": {
+            "test": "datum.records >= 2000",
+            "value": "white"
+          },
+          "value": "#2B2620"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Open Sans",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Open Sans",
+      "fontSize": 16,
+      "fontWeight": 700,
+      "color": "#2B2620",
+      "anchor": "start",
+      "subtitleFontSize": 12.5,
+      "subtitleColor": "#5B5348",
+      "offset": 12
+    },
+    "axis": {
+      "labelColor": "#2B2620"
+    },
+    "legend": {
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "titleColor": "#2B2620",
+      "labelColor": "#4A4238"
+    }
+  }
+}

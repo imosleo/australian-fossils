@@ -1,0 +1,99 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Out of every 1,000 Australian fossil specimens in the global online catalogue, only 4 are held in Australia",
+    "subtitle": "Each square stands for 0.1% of the 66,252 specimens (about 66 specimens). Colour shows the country of the museum holding them."
+  },
+  "data": {
+    "url": "data/waffle_cells.csv",
+    "format": {
+      "parse": {
+        "column": "number",
+        "row": "number",
+        "specimens": "number"
+      }
+    }
+  },
+  "width": 990,
+  "height": 396,
+  "mark": {
+    "type": "square",
+    "size": 250,
+    "opacity": 1
+  },
+  "encoding": {
+    "x": {
+      "field": "column",
+      "type": "ordinal",
+      "axis": null
+    },
+    "y": {
+      "field": "row",
+      "type": "ordinal",
+      "axis": null,
+      "sort": "descending"
+    },
+    "color": {
+      "field": "country",
+      "type": "nominal",
+      "title": null,
+      "scale": {
+        "domain": [
+          "Germany",
+          "United States",
+          "United Kingdom",
+          "Sweden",
+          "Other countries",
+          "Australia"
+        ],
+        "range": [
+          "#1D4E6E",
+          "#4F7FA0",
+          "#86A9C2",
+          "#BCCEDC",
+          "#DDD6CA",
+          "#B03A2E"
+        ]
+      },
+      "legend": {
+        "orient": "bottom",
+        "direction": "horizontal",
+        "columns": 6,
+        "symbolType": "square"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "country",
+        "type": "nominal",
+        "title": "Held in"
+      },
+      {
+        "field": "specimens",
+        "type": "quantitative",
+        "title": "Specimens",
+        "format": ","
+      }
+    ]
+  },
+  "config": {
+    "font": "Open Sans",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Open Sans",
+      "fontSize": 16,
+      "fontWeight": 700,
+      "color": "#2B2620",
+      "anchor": "start",
+      "subtitleFontSize": 12.5,
+      "subtitleColor": "#5B5348",
+      "offset": 12
+    },
+    "legend": {
+      "labelFontSize": 12,
+      "labelColor": "#2B2620"
+    }
+  }
+}

@@ -1,0 +1,86 @@
+period,order,group,records
+Cambrian,1,Animals with backbones,28
+Cambrian,1,Arthropods,1331
+Cambrian,1,Corals,44
+Cambrian,1,Lamp shells,1338
+Cambrian,1,Molluscs,846
+Cambrian,1,Other and unclassified,1916
+Cambrian,1,Plants,9
+Carboniferous,5,Animals with backbones,18
+Carboniferous,5,Arthropods,86
+Carboniferous,5,Corals,149
+Carboniferous,5,Lamp shells,1233
+Carboniferous,5,Molluscs,446
+Carboniferous,5,Other and unclassified,347
+Carboniferous,5,Plants,26
+Cretaceous,9,Animals with backbones,784
+Cretaceous,9,Arthropods,180
+Cretaceous,9,Corals,20
+Cretaceous,9,Lamp shells,130
+Cretaceous,9,Molluscs,686
+Cretaceous,9,Other and unclassified,1001
+Cretaceous,9,Plants,1035
+Devonian,4,Animals with backbones,1449
+Devonian,4,Arthropods,451
+Devonian,4,Corals,1094
+Devonian,4,Lamp shells,1072
+Devonian,4,Molluscs,1263
+Devonian,4,Other and unclassified,1425
+Devonian,4,Plants,73
+Jurassic,8,Animals with backbones,39
+Jurassic,8,Arthropods,80
+Jurassic,8,Lamp shells,11
+Jurassic,8,Molluscs,87
+Jurassic,8,Other and unclassified,25
+Jurassic,8,Plants,38
+Neogene,11,Animals with backbones,1107
+Neogene,11,Arthropods,101
+Neogene,11,Corals,95
+Neogene,11,Lamp shells,47
+Neogene,11,Molluscs,1709
+Neogene,11,Other and unclassified,1508
+Neogene,11,Plants,538
+Ordovician,2,Animals with backbones,126
+Ordovician,2,Arthropods,552
+Ordovician,2,Corals,225
+Ordovician,2,Lamp shells,707
+Ordovician,2,Molluscs,339
+Ordovician,2,Other and unclassified,455
+Ordovician,2,Plants,37
+Palaeogene,10,Animals with backbones,510
+Palaeogene,10,Arthropods,31
+Palaeogene,10,Corals,71
+Palaeogene,10,Lamp shells,176
+Palaeogene,10,Molluscs,835
+Palaeogene,10,Other and unclassified,576
+Palaeogene,10,Plants,1280
+Permian,6,Animals with backbones,19
+Permian,6,Arthropods,956
+Permian,6,Corals,120
+Permian,6,Lamp shells,4665
+Permian,6,Molluscs,1913
+Permian,6,Other and unclassified,1966
+Permian,6,Plants,167
+Precambrian,0,Corals,14
+Precambrian,0,Other and unclassified,630
+Precambrian,0,Plants,85
+Quaternary,12,Animals with backbones,2146
+Quaternary,12,Arthropods,9
+Quaternary,12,Corals,900
+Quaternary,12,Lamp shells,46
+Quaternary,12,Molluscs,718
+Quaternary,12,Other and unclassified,479
+Quaternary,12,Plants,3937
+Silurian,3,Animals with backbones,679
+Silurian,3,Arthropods,195
+Silurian,3,Corals,215
+Silurian,3,Lamp shells,325
+Silurian,3,Molluscs,64
+Silurian,3,Other and unclassified,208
+Silurian,3,Plants,3
+Triassic,7,Animals with backbones,124
+Triassic,7,Arthropods,379
+Triassic,7,Lamp shells,1
+Triassic,7,Molluscs,38
+Triassic,7,Other and unclassified,130
+Triassic,7,Plants,103

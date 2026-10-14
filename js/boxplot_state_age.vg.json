@@ -1,0 +1,107 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "South Australia has the oldest fossil sites, Victoria the youngest",
+    "subtitle": [
+      "Each box holds the middle half of a state's fossil sites by age. The dark line marks the",
+      "typical (median) site and the thin lines reach the oldest and youngest sites."
+    ]
+  },
+  "data": {
+    "url": "data/fossil_sites.csv",
+    "format": {
+      "parse": {
+        "age_ma": "number"
+      }
+    }
+  },
+  "width": "container",
+  "height": 300,
+  "transform": [
+    {
+      "filter": "datum.age_ma <= 541"
+    }
+  ],
+  "mark": {
+    "type": "boxplot",
+    "extent": "min-max",
+    "size": 18,
+    "color": "#C9B79C",
+    "median": {
+      "color": "#2B2620",
+      "strokeWidth": 2.5
+    },
+    "rule": {
+      "color": "#8C7B65"
+    }
+  },
+  "encoding": {
+    "y": {
+      "field": "state",
+      "type": "nominal",
+      "title": null,
+      "sort": [
+        "South Australia",
+        "Northern Territory",
+        "Australian Capital Territory",
+        "New South Wales",
+        "Western Australia",
+        "Tasmania",
+        "Queensland",
+        "Victoria"
+      ],
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "labelFontSize": 12
+      }
+    },
+    "x": {
+      "field": "age_ma",
+      "type": "quantitative",
+      "title": "Age of fossil site (million years ago)",
+      "scale": {
+        "domain": [
+          545,
+          0
+        ]
+      },
+      "axis": {
+        "values": [
+          500,
+          400,
+          300,
+          200,
+          100,
+          0
+        ],
+        "grid": true,
+        "gridColor": "#EEE8DE"
+      }
+    }
+  },
+  "config": {
+    "font": "Open Sans",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Open Sans",
+      "fontSize": 16,
+      "fontWeight": 700,
+      "color": "#2B2620",
+      "anchor": "start",
+      "subtitleFontSize": 12.5,
+      "subtitleColor": "#5B5348",
+      "offset": 12
+    },
+    "axis": {
+      "labelFontSize": 11.5,
+      "titleFontSize": 12,
+      "titleColor": "#4A4238",
+      "labelColor": "#2B2620",
+      "domainColor": "#B8AE9F",
+      "tickColor": "#B8AE9F"
+    }
+  }
+}

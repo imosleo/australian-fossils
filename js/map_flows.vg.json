@@ -1,0 +1,360 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Most Australian fossil specimens catalogued online are held overseas",
+    "subtitle": "Lines run from Australia to each museum or university sharing Australian fossil specimens online. Thicker lines mean more specimens."
+  },
+  "width": "container",
+  "height": 470,
+  "projection": {
+    "type": "equalEarth",
+    "rotate": [
+      -150,
+      0,
+      0
+    ]
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "js/WorldMapWithGraticules.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_graticules_30"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": null,
+        "stroke": "#E9E3D8",
+        "strokeWidth": 0.6
+      }
+    },
+    {
+      "data": {
+        "url": "js/WorldMapWithGraticules.topojson",
+        "format": {
+          "type": "topojson",
+          "feature": "ne_110m_admin_0_countries"
+        }
+      },
+      "mark": {
+        "type": "geoshape",
+        "fill": "#E6DFD3",
+        "stroke": "white",
+        "strokeWidth": 0.5
+      }
+    },
+    {
+      "data": {
+        "url": "data/specimen_holders.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.country != 'Australia'"
+        },
+        {
+          "calculate": "134",
+          "as": "from_longitude"
+        },
+        {
+          "calculate": "-25",
+          "as": "from_latitude"
+        }
+      ],
+      "mark": {
+        "type": "rule",
+        "strokeCap": "round",
+        "opacity": 0.6
+      },
+      "encoding": {
+        "longitude": {
+          "field": "from_longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "from_latitude",
+          "type": "quantitative"
+        },
+        "longitude2": {
+          "field": "longitude"
+        },
+        "latitude2": {
+          "field": "latitude"
+        },
+        "strokeWidth": {
+          "field": "specimens",
+          "type": "quantitative",
+          "scale": {
+            "range": [
+              0.6,
+              12
+            ]
+          },
+          "legend": null
+        },
+        "color": {
+          "value": "#2F7EA8"
+        },
+        "order": {
+          "field": "specimens",
+          "type": "quantitative",
+          "sort": "descending"
+        },
+        "tooltip": [
+          {
+            "field": "institution",
+            "type": "nominal",
+            "title": "Held by"
+          },
+          {
+            "field": "country",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "specimens",
+            "type": "quantitative",
+            "title": "Australian fossil specimens",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/specimen_holders.csv"
+      },
+      "mark": {
+        "type": "circle",
+        "stroke": "white",
+        "strokeWidth": 0.8,
+        "opacity": 0.95
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "size": {
+          "field": "specimens",
+          "type": "quantitative",
+          "title": "Specimens held",
+          "scale": {
+            "range": [
+              15,
+              900
+            ]
+          },
+          "legend": {
+            "values": [
+              1000,
+              10000,
+              25000
+            ],
+            "orient": "bottom-left",
+            "direction": "horizontal",
+            "labelExpr": "format(datum.value, ',')"
+          }
+        },
+        "color": {
+          "condition": {
+            "test": "datum.country == 'Australia'",
+            "value": "#B03A2E"
+          },
+          "value": "#1D4E6E"
+        },
+        "tooltip": [
+          {
+            "field": "institution",
+            "type": "nominal",
+            "title": "Held by"
+          },
+          {
+            "field": "country",
+            "type": "nominal",
+            "title": "Country"
+          },
+          {
+            "field": "specimens",
+            "type": "quantitative",
+            "title": "Australian fossil specimens",
+            "format": ","
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "url": "data/specimen_holders.csv"
+      },
+      "transform": [
+        {
+          "filter": "datum.country == 'United States' && datum.specimens >= 7000"
+        },
+        {
+          "calculate": "[datum.institution, format(datum.specimens, ',') + ' specimens']",
+          "as": "label"
+        }
+      ],
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -14,
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#2B2620",
+        "lineHeight": 13
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "label"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "longitude": 149.1,
+            "latitude": -35.3,
+            "note": [
+              "Canberra, Commonwealth Scientific and",
+              "Industrial Research Organisation:",
+              "278 specimens, the only Australian holder"
+            ]
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "dx": 12,
+        "dy": 10,
+        "baseline": "top",
+        "fontSize": 11,
+        "fontStyle": "italic",
+        "color": "#B03A2E",
+        "lineHeight": 13
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "note"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "longitude": 32,
+            "latitude": 64,
+            "note": [
+              "Europe holds the three largest collections:",
+              "Museum für Naturkunde Berlin, 26,003 specimens",
+              "Natural History Museum London, 9,018",
+              "Swedish Museum of Natural History, 8,353"
+            ]
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "top",
+        "fontSize": 11,
+        "fontWeight": 600,
+        "color": "#2B2620",
+        "lineHeight": 14
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "note"
+        }
+      }
+    },
+    {
+      "data": {
+        "values": [
+          {
+            "longitude": 134,
+            "latitude": -25,
+            "note": "Australia"
+          }
+        ]
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "dx": -10,
+        "dy": -6,
+        "fontSize": 12,
+        "fontWeight": 700,
+        "color": "#B03A2E"
+      },
+      "encoding": {
+        "longitude": {
+          "field": "longitude",
+          "type": "quantitative"
+        },
+        "latitude": {
+          "field": "latitude",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "note"
+        }
+      }
+    }
+  ],
+  "config": {
+    "font": "Open Sans",
+    "view": {
+      "stroke": null
+    },
+    "title": {
+      "font": "Open Sans",
+      "fontSize": 16,
+      "fontWeight": 700,
+      "color": "#2B2620",
+      "anchor": "start",
+      "subtitleFontSize": 12.5,
+      "subtitleColor": "#5B5348",
+      "offset": 12
+    },
+    "legend": {
+      "labelFontSize": 11,
+      "titleFontSize": 12,
+      "titleColor": "#2B2620",
+      "labelColor": "#4A4238"
+    }
+  }
+}
